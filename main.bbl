@@ -1,0 +1,74 @@
+\begin{thebibliography}{10}
+
+\bibitem{aframe2025}
+{A-Frame}.
+\newblock A web framework for building virtual reality experiences.
+\newblock \url{https://aframe.io/}, 2025.
+\newblock Consultado el 6 de abril de 2025.
+
+\bibitem{aframe2025docs}
+{A-Frame}.
+\newblock A web framework for building virtual reality experiences.
+\newblock \url{https://aframe.io/docs/1.7.0/introduction/}, 2025.
+\newblock Consultado el 6 de abril de 2025.
+
+\bibitem{assemblyai_about}
+AssemblyAI.
+\newblock Assemblyai - ai models to transcribe and understand speech.
+\newblock Official website of AssemblyAI.
+
+\bibitem{w3c-html-intro}
+W.~W.~W. Consortium.
+\newblock What is html?
+\newblock Introduction to HTML by the W3C.
+
+\bibitem{dirksen2013learning}
+J.~Dirksen et~al.
+\newblock {\em Learning Three. js: the JavaScript 3D library for WebGL},
+  volume~3.
+\newblock Packt Publishing Livery Place, UK, 2013.
+
+\bibitem{webgl-khronos}
+K.~Group.
+\newblock Webgl overview.
+\newblock Official website of the WebGL standard by Khronos Group.
+
+\bibitem{webvr-spec}
+W.~I. W.~C. Group.
+\newblock Webvr 1.1 specification, 2017.
+\newblock Superseded by WebXR Device API.
+
+\bibitem{mdn_javascript_data_structures}
+M.~D. Network.
+\newblock Estructuras de datos y tipos en javascript.
+\newblock Documentación sobre tipos de datos primitivos, objetos y arrays en
+  JavaScript por MDN en español.
+
+\bibitem{mdn_javascript_intro_es}
+M.~D. Network.
+\newblock ¿qué es javascript?
+\newblock Introducción a JavaScript en MDN en español.
+
+\bibitem{whisper}
+A.~Radford, J.~W. Kim, T.~Xu, G.~Brockman, C.~McLeavey, and I.~Sutskever.
+\newblock Robust speech recognition via large-scale weak supervision.
+\newblock \url{https://github.com/openai/whisper}, 2022.
+
+\bibitem{aframeComponent}
+Supereggbert.
+\newblock aframe-htmlembed-component, 2025.
+\newblock Accessed: 2025-05-03.
+
+\bibitem{w3c_webxr}
+{W3C}.
+\newblock {WebXR Device API}.
+\newblock \url{https://www.w3.org/TR/webxr/}, 2024.
+\newblock [Accedido: 7 de abril de 2025].
+
+\bibitem{whisperweb}
+Xenova.
+\newblock Whisper web - robust speech recognition in the browser.
+\newblock \url{https://huggingface.co/spaces/Xenova/whisper-web}, 2022.
+\newblock Hugging Face Space.
+
+\end{thebibliography}
