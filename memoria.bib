@@ -23,57 +23,10 @@
 % Si acaso, busca por citas en la WikiPedia (que sí ha de referenciar fuentes
 % primarias) y haz referencia a las mismas.
 
-@Book{bonabeau:_swarm,
-  author = 	 {Eric Bonabeau and Marco Dorigo and Guy Theraulaz},
-  title = 	 {Swarm Intelligence: From Natural to Articial Systems},
-  publisher = 	 {Oxford University Press, Inc.},
-  year = 	 1999
-}
-
-@Article{parnas72:_modules,
- author = {David L. Parnas},
- title = {On the criteria to be used in decomposing systems into modules},
- journal = CACM,
- volume = 15,
- year = 1972,
- pages = {1053-1058}
-}
-
-@InCollection{GBarahona04:_debian,
-   author =       {González-Barahona, Jesús M. and Robles, Gregorio and
-                   Ortuño Pérez, Miguel and Rodero-Merino, Luis and
-                   Centeno González, José and Matellan-Olivera, Vicente and
-                   Castro-Barbero, Eva and de-las-Heras-Quirós, Pedro},
-   title =        {Analyzing the anatomy of {GNU/L}inux distributions:
-                   methodology and case studies ({R}ed {H}at and {D}ebian)},
-   pages =        {27-58},
-   editor =       {Koch, Stefan},
-   booktitle =    {Free/Open Source Software Development},
-   publisher =    {Idea Group Publishing},
-   address =      {Hershey, Pennsylvania, USA},
-   year =         {2004},
-}
-
-@TechReport{ghosh02:_developer_survey,
-  author = 	 {Rishab Aiyer Ghosh and Ruediger Glott and Bernhard Krieger and Gregorio Robles},
-  title = 	 {Survey of Developers (Free/Libre and Open Source Software: Survey and Study)},
-  institution =  {International Institute of Infonomics. University of Maastricht},
-  year = 	 2002,
-  address =	 {The Netherlands},
-  month =	 jun,
-  note =	 {\\ http://www.infonomics.nl/FLOSS/report}
-}
-
-@TechReport{ghosh02:_developer_survey,
-  author = 	 {Rishab Aiyer Ghosh and Ruediger Glott and Bernhard Krieger and Gregorio Robles},
-  title = 	 {Survey of Developers (Free/Libre and Open Source Software: Survey and Study)},
-  institution =  {International Institute of Infonomics. University of Maastricht},
-
-}
 
 @Misc{González01:Web_XR,
   author =	 {Carlos González González},
-  title =	 {Web XR: Explorando la Realidad Extendida en la Web},
+  title =	 {{Web XR}: Explorando la Realidad Extendida en la Web},
   month =	 may,  
   year = 	 2023,
   note =	 {\\ https://www.onirix.com/es/webxr-ejemplos-desarrollo-realidad-extendida/}
@@ -96,19 +49,50 @@
   booktitle={ProSim'05},
   year={2005}
 }
-@misc{aframe2025,
-  author       = {{A-Frame}},
-  title        = {A web framework for building virtual reality experiences},
-  howpublished = {\url{https://aframe.io/}},
-  note         = {Consultado el 6 de abril de 2025},
-  year         = {2025}
+
+@misc{whisper,
+  author = {Radford, Alec and Kim, Jong Wook and Xu, Tao and Brockman, Greg and McLeavey, Christine and Sutskever, Ilya},
+  title = {Robust Speech Recognition via Large-Scale Weak Supervision},
+  publisher = {OpenAI},
+  year = {2024},
+  howpublished = {\url{https://github.com/openai/whisper}},
+}
+@misc{openai_whisper,
+  author       = {OpenAI},
+  title        = {Whisper},
+  year         = {2024},
+  howpublished = {\url{https://openai.com/es-ES/index/whisper/}},
+  note         = {Consultado el 5 de Mayo de 2025}
+}
+
+@misc{whisperweb,
+  author = {Xenova},
+  title = {Whisper Web - Robust Speech Recognition in the Browser},
+  howpublished = {\url{https://huggingface.co/spaces/Xenova/whisper-web}},
+  year = {2022},
+  note = {Hugging Face Space, Consultado el 6 de Mayo de 2025},
+}
+@misc{whisperwebFiles,
+  author = {Xenova},
+  title = {Whisper Web - Robust Speech Recognition in the Browser},
+  howpublished = {\url{https://huggingface.co/spaces/Xenova/whisper-web/tree/main}},
+  year = {2022},
+  note = {Hugging Face Space, Consultado el 6 de Mayo de 2025},
+}
+@misc{web_speech_api,
+  author = {Mozilla},
+  title = {{Web Speech API - Web APIs | MDN}},
+  publisher = {MDN Web Docs},
+  year = {2025},
+  howpublished = {\url{https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API}},
+  note         = {Consultado el 5 de Mayo de 2025}
 }
 
 @misc{aframe2025docs,
   author       = {{A-Frame}},
   title        = {A web framework for building virtual reality experiences},
   howpublished = {\url{https://aframe.io/docs/1.7.0/introduction/}},
-  note         = {Consultado el 6 de abril de 2025},
+  note         = {Consultado el 6 de mayo de 2025},
   year         = {2025}
 }
 @book{dirksen2013learning,
@@ -120,41 +104,51 @@
 }
 @misc{w3c_webxr,
   author       = "{W3C}",
-  title        = "{WebXR Device API}",
+  title        = "{{WebXR Device API}}",
   howpublished = "\url{https://www.w3.org/TR/webxr/}",
   year         = {2024},
-  note         = "[Accedido: 7 de abril de 2025]",
+  note         = "[Accedido: 7 de mayo de 2025]",
 }
-@misc{webvr-spec,
-  author = {W3C Immersive Web Community Group},
-  title = {WebVR 1.1 Specification},
-  year = {2017},
-  url = {https://immersive-web.github.io/webvr/spec/1.1/},
-  note = {Superseded by WebXR Device API}
+@misc{webvr-info,
+  author       = {{WebVR Contributors}},
+  title        = {{WebVR - Bringing Virtual Reality to the Web}},
+  year         = {2025},
+  url          = {https://webvr.info/},
+  note         = {WebVR is an open specification that makes it possible to experience VR in your browser. The goal is to make it easier for everyone to get into VR experiences.}
 }
+
 @misc{webgl-khronos,
   author = {Khronos Group},
-  title = {WebGL Overview},
+  title = {{WebGL} Overview},
   url = {https://www.khronos.org/webgl/},
   note = {Official website of the WebGL standard by Khronos Group}
 }
+@misc{webgl-mdn,
+  author       = {{MDN Web Docs}},
+  title        = {{WebGL API} - {Web APIs} | {MDN}},
+  year         = {2025},
+  url          = {https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API},
+  note         = {Documentation for the {WebGL} {API} on {MDN} {Web Docs}},
+  howpublished = {\url{https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API}}
+}
+
 @misc{w3c-html-intro,
   author = {World Wide Web Consortium},
-  title = {What is HTML?},
+  title = {What is {HTML}?},
   url = {https://www.w3.org/html/},
   note = {Introduction to HTML by the W3C}
 }
 @misc{mdn_javascript_intro_es,
   author = {Mozilla Developer Network},
-  title = {¿Qué es JavaScript?},
-  url = {https://developer.mozilla.org/es/docs/Web/JavaScript/¿Qué_es_JavaScript},
+  title = {{¿Qué es JavaScript?}},
+  url = {https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting/What_is_JavaScript},
   note = {Introducción a JavaScript en MDN en español}
 }
 
 @misc{assemblyai_about,
   author = {AssemblyAI},
   title = {AssemblyAI - AI models to transcribe and understand speech},
-  url = {https://www.assemblyai.com/},
+  url = {https://www.assemblyai.com/docs/speech-to-text/streaming},
   note = {Official website of AssemblyAI}
 }
 
@@ -165,28 +159,6 @@
   note = {Documentación sobre tipos de datos primitivos, objetos y arrays en JavaScript por MDN en español}
 }
 
-@misc{whisper,
-  author = {Radford, Alec and Kim, Jong Wook and Xu, Tao and Brockman, Greg and McLeavey, Christine and Sutskever, Ilya},
-  title = {Robust Speech Recognition via Large-Scale Weak Supervision},
-  publisher = {OpenAI},
-  year = {2022},
-  howpublished = {\url{https://github.com/openai/whisper}},
-}
-@misc{whisperweb,
-  author = {Xenova},
-  title = {Whisper Web - Robust Speech Recognition in the Browser},
-  howpublished = {\url{https://huggingface.co/spaces/Xenova/whisper-web}},
-  year = {2022},
-  note = {Hugging Face Space},
-}
-
-@misc{web_speech_api,
-  author = {Mozilla},
-  title = {Web Speech API - Web APIs | MDN},
-  publisher = {MDN Web Docs},
-  year = {2025},
-  howpublished = {\url{https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API}},
-}
 @article{adorf2013web,
   title={Web speech API},
   author={Adorf, Julius},
@@ -199,5 +171,135 @@
   title = {aframe-htmlembed-component},
   year = {2025},
   url = {https://github.com/supereggbert/aframe-htmlembed-component},
-  note = {Accessed: 2025-05-03}
+  note = {Consultado el 23 de Mayo de 2025}
+}
+@book{SchwaberSutherland2020,
+  title={The Scrum Guide: A Complete Guide to the Most Popular Agile Framework},
+  author={Schwaber, Ken and Sutherland, Jeff},
+  year={2020},
+  publisher={Scrum.org},
+  note = {Consultado el 16 de Mayo de 2025}
+}
+@misc{threejs-keyframes,
+  author       = {{Three.js Contributors}},
+  title        = {{Three.js Example: WebGL Animation Keyframes}},
+  year         = {2025},
+  url          = {https://threejs.org/examples/#webgl_animation_keyframes},
+  note         = {Demostración de animación de modelos 3D utilizando fotogramas clave en Three.js}
+}
+@misc{hello-webxr,
+  author       = {{Mozilla Mixed Reality Team}},
+  title        = {{Hello WebXR!}},
+  year         = {2025},
+  url          = {https://msub2.github.io/hello-webxr/},
+  note         = {Experiencia interactiva de realidad virtual desarrollada para celebrar el lanzamiento de la especificación {WebXR}.}
+}
+@misc{arkio-workflow,
+  author       = {{Arkio}},
+  title        = {Arkio Workflow Documentation},
+  year         = {2025},
+  url          = {https://www.arkio.is/workflow/},
+  note         = {Documentación oficial sobre las integraciones de flujo de trabajo de Arkio con herramientas como Revit, Unity, Rhino, SketchUp y BIM 360.}
+}
+
+@misc{arkio-website,
+  author       = {{Arkio}},
+  title        = {Arkio - Collaborative Spatial Design},
+  year         = {2025},
+  url          = {https://www.arkio.is/},
+  note         = {Imagen obtenida del sitio web oficial de Arkio}
+}
+@misc{shapelab-workflows,
+  author       = {{Leopoly Kft.}},
+  title        = {Shapelab Workflows},
+  year         = {2025},
+  url          = {https://shapelabvr.com/workflows},
+  note         = {Documentación oficial sobre los flujos de trabajo en Shapelab, incluyendo aplicaciones en creación de personajes, impresión 3D, artes visuales y procesamiento de escaneos 3D.}
+}
+@misc{shapelab-rov2024,
+  author       = {{Real o Virtual}},
+  title        = {Shapelab 2024 (PC)},
+  year         = {2024},
+  url          = {https://www.realovirtual.com/rovdb/juegos/25122/shapelab-2024},
+  note         = {Ficha del juego Shapelab 2024 en la base de datos de Real o Virtual, con detalles sobre sus características y compatibilidad en realidad virtual.}
+}
+@misc{star-trek,
+  author       = {{Rob Cram}},
+  title        = {Star Trek Bridge Crew Voice Commands Demo},
+  year         = {2017},
+  url          = {https://www.youtube.com/watch?v=FH4bY4ZG9Pw},
+  note         = {Demostración de juego en realidad virtual de Star Trek: Bridge Crew, publicada por Rob Cram en YouTube.}
+}
+
+@misc{ubisoft-star-trek,
+  author       = {{Ubisoft}},
+  title        = {Voice Commands in Star Trek: Bridge Crew},
+  year         = {2025},
+  url          = {https://www.ubisoft.com/en-us/help/star-trek-bridge-crew/gameplay/article/voice-commands-in-star-trek-bridge-crew/000060554},
+  note         = {Artículo de soporte oficial que explica cómo utilizar comandos de voz en el juego Star Trek: Bridge Crew.}
+}
+@book{flanagan2002javascript,
+  title={JavaScript: The Definitive Guide},
+  author={Flanagan, D.},
+  isbn={9780596000486},
+  lccn={2002279900},
+  series={Definitive Guides},
+  url={https://books.google.es/books?id=vJGlu9t9LNYC},
+  year={2002},
+  publisher={O'Reilly}
+}
+@manual{nodejs-docs,
+  author       = {{Node.js Contributors}},
+  title        = {{Node.js API Documentation}},
+  year         = {2025},
+  url          = {https://nodejs.org/docs/latest/api/},
+  note         = {Documentación oficial de la API de Node.js, versión 24.1.0}
+}
+@misc{nodejs-github,
+  author       = {{Node.js Contributors}},
+  title        = {{Node.js JavaScript Runtime}},
+  year         = {2025},
+  url          = {https://github.com/nodejs/node},
+  note         = {Repositorio oficial del entorno de ejecución JavaScript Node.js, mantenido por la comunidad y respaldado por la OpenJS Foundation.}
+}
+@misc{nodejs-about-es,
+  author       = {{Node.js Contributors}},
+  title        = {{Sobre Node.js}},
+  year         = {2025},
+  url          = {https://nodejs.org/es/about},
+  note         = {Descripción oficial del entorno de ejecución JavaScript asíncrono basado en eventos, diseñado para construir aplicaciones de red escalables.}
+}
+@book{gauchat2012gran,
+  title={{El gran libro de HTML5, CSS3 y Javascript}},
+  author={{Gauchat, Juan Diego}},
+  year={2012},
+  publisher={Marcombo}
+}
+@misc{github-docs-git,
+  author       = {{GitHub Docs}},
+  title        = {{Acerca de GitHub y Git}},
+  year         = {2024},
+  url          = {https://docs.github.com/es/get-started/start-your-journey/about-github-and-git},
+  note         = {Consultado el 13 de mayo de 2025}
+}
+@misc{vscode-docs,
+  author       = {{Microsoft}},
+  title        = {{Visual Studio Code Documentation}},
+  year         = {2024},
+  url          = {https://code.visualstudio.com/docs},
+  note         = {Consultado el 13 de mayo de 2025}
+}
+@misc{meta-quest3,
+  author       = {{Meta Platforms}},
+  title        = {{Meta Quest 3}},
+  year         = {2024},
+  url          = {https://www.meta.com/es/quest/quest-3/},
+  note         = {Consultado el 13 de mayo de 2025}
+}
+@misc{latex-project,
+  author       = {{The LaTeX Project}},
+  title        = {{The LaTeX Project}},
+  year         = {2025},
+  url          = {https://www.latex-project.org/},
+  note         = {Consultado el 14 de mayo de 2025}
 }
