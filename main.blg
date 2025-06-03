@@ -1,40 +1,45 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
-Reallocating 'name_of_file' (item size: 1) to 6 items.
-The style file: abbrv.bst
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: plainurl.bst
 Reallocating 'name_of_file' (item size: 1) to 8 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: memoria.bib
 You've used 35 entries,
-            2118 wiz_defined-function locations,
-            647 strings with 8454 characters,
-and the built_in function-call counts, 7585 in all, are:
-= -- 708
-> -- 283
+            2943 wiz_defined-function locations,
+            806 strings with 10843 characters,
+and the built_in function-call counts, 12247 in all, are:
+= -- 1282
+> -- 319
 < -- 1
 + -- 121
 - -- 84
-* -- 252
-:= -- 1289
-add.period$ -- 114
+* -- 345
+:= -- 1655
+add.period$ -- 137
 call.type$ -- 35
 change.case$ -- 141
 chr.to.int$ -- 0
 cite$ -- 35
-duplicate$ -- 270
-empty$ -- 762
+duplicate$ -- 332
+empty$ -- 1440
 format.name$ -- 84
-if$ -- 1638
+if$ -- 3452
 int.to.chr$ -- 0
 int.to.str$ -- 35
 missing$ -- 9
-newline$ -- 186
+newline$ -- 209
 num.names$ -- 70
-pop$ -- 303
+pop$ -- 486
 preamble$ -- 1
 purify$ -- 111
 quote$ -- 0
-skip$ -- 233
+skip$ -- 997
 stack$ -- 0
 substring$ -- 177
 swap$ -- 37
@@ -45,4 +50,4 @@ type$ -- 132
 warning$ -- 0
 while$ -- 70
 width$ -- 37
-write$ -- 366
+write$ -- 412

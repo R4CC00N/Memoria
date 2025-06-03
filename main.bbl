@@ -2,38 +2,42 @@
 
 \bibitem{aframe2025docs}
 {A-Frame}.
-\newblock A web framework for building virtual reality experiences.
-\newblock \url{https://aframe.io/docs/1.7.0/introduction/}, 2025.
+\newblock A web framework for building virtual reality experiences, 2025.
 \newblock Consultado el 6 de mayo de 2025.
+\newblock URL: \url{https://aframe.io/docs/1.7.0/introduction/}.
 
 \bibitem{adorf2013web}
-J.~Adorf.
-\newblock Web speech api.
+Julius Adorf.
+\newblock {Web speech API}.
 \newblock {\em KTH Royal Institute of Technology}, 1, 2013.
 
 \bibitem{arkio-website}
 {Arkio}.
 \newblock Arkio - collaborative spatial design, 2025.
 \newblock Imagen obtenida del sitio web oficial de Arkio.
+\newblock URL: \url{https://www.arkio.is/}.
 
 \bibitem{arkio-workflow}
 {Arkio}.
 \newblock Arkio workflow documentation, 2025.
 \newblock Documentación oficial sobre las integraciones de flujo de trabajo de
   Arkio con herramientas como Revit, Unity, Rhino, SketchUp y BIM 360.
+\newblock URL: \url{https://www.arkio.is/workflow/}.
 
 \bibitem{assemblyai_about}
 AssemblyAI.
-\newblock Assemblyai - ai models to transcribe and understand speech.
+\newblock {AssemblyAI - AI models to transcribe and understand speech}.
 \newblock Official website of AssemblyAI.
+\newblock URL: \url{https://www.assemblyai.com/docs/speech-to-text/streaming}.
 
 \bibitem{w3c-html-intro}
-W.~W.~W. Consortium.
+World Wide~Web Consortium.
 \newblock What is {HTML}?
 \newblock Introduction to HTML by the W3C.
+\newblock URL: \url{https://www.w3.org/html/}.
 
 \bibitem{dirksen2013learning}
-J.~Dirksen et~al.
+Jos Dirksen et~al.
 \newblock {\em Learning Three. js: the JavaScript 3D library for WebGL},
   volume~3.
 \newblock Packt Publishing Livery Place, UK, 2013.
@@ -42,6 +46,7 @@ J.~Dirksen et~al.
 D.~Flanagan.
 \newblock {\em JavaScript: The Definitive Guide}.
 \newblock Definitive Guides. O'Reilly, 2002.
+\newblock URL: \url{https://books.google.es/books?id=vJGlu9t9LNYC}.
 
 \bibitem{gauchat2012gran}
 {Gauchat, Juan Diego}.
@@ -52,11 +57,14 @@ D.~Flanagan.
 {GitHub Docs}.
 \newblock {Acerca de GitHub y Git}, 2024.
 \newblock Consultado el 13 de mayo de 2025.
+\newblock URL:
+  \url{https://docs.github.com/es/get-started/start-your-journey/about-github-and-git}.
 
 \bibitem{webgl-khronos}
-K.~Group.
+Khronos Group.
 \newblock {WebGL} overview.
 \newblock Official website of the WebGL standard by Khronos Group.
+\newblock URL: \url{https://www.khronos.org/webgl/}.
 
 \bibitem{shapelab-workflows}
 {Leopoly Kft.}
@@ -64,90 +72,105 @@ K.~Group.
 \newblock Documentación oficial sobre los flujos de trabajo en Shapelab,
   incluyendo aplicaciones en creación de personajes, impresión 3D, artes
   visuales y procesamiento de escaneos 3D.
+\newblock URL: \url{https://shapelabvr.com/workflows}.
 
 \bibitem{webgl-mdn}
 {MDN Web Docs}.
-\newblock {WebGL API} - {Web APIs} | {MDN}.
-\newblock \url{https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API},
-  2025.
+\newblock {WebGL API} - {Web APIs} | {MDN}, 2025.
 \newblock Documentation for the {WebGL} {API} on {MDN} {Web Docs}.
+\newblock URL:
+  \url{https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API}.
 
 \bibitem{meta-quest3}
 {Meta Platforms}.
 \newblock {Meta Quest 3}, 2024.
 \newblock Consultado el 13 de mayo de 2025.
+\newblock URL: \url{https://www.meta.com/es/quest/quest-3/}.
 
 \bibitem{vscode-docs}
 {Microsoft}.
 \newblock {Visual Studio Code Documentation}, 2024.
 \newblock Consultado el 13 de mayo de 2025.
+\newblock URL: \url{https://code.visualstudio.com/docs}.
 
 \bibitem{web_speech_api}
 Mozilla.
-\newblock {Web Speech API - Web APIs | MDN}.
-\newblock
-  \url{https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API}, 2025.
+\newblock {Web Speech API - Web APIs | MDN}, 2025.
 \newblock Consultado el 5 de Mayo de 2025.
+\newblock URL:
+  \url{https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API}.
 
 \bibitem{hello-webxr}
 {Mozilla Mixed Reality Team}.
 \newblock {Hello WebXR!}, 2025.
 \newblock Experiencia interactiva de realidad virtual desarrollada para
   celebrar el lanzamiento de la especificación {WebXR}.
+\newblock URL: \url{https://msub2.github.io/hello-webxr/}.
 
 \bibitem{mdn_javascript_data_structures}
-M.~D. Network.
+Mozilla~Developer Network.
 \newblock Estructuras de datos y tipos en javascript.
 \newblock Documentación sobre tipos de datos primitivos, objetos y arrays en
   JavaScript por MDN en español.
+\newblock URL:
+  \url{https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures}.
 
 \bibitem{mdn_javascript_intro_es}
-M.~D. Network.
+Mozilla~Developer Network.
 \newblock {¿Qué es JavaScript?}
 \newblock Introducción a JavaScript en MDN en español.
+\newblock URL:
+  \url{https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting/What_is_JavaScript}.
 
 \bibitem{nodejs-docs}
 {Node.js Contributors}.
 \newblock {\em {Node.js API Documentation}}, 2025.
 \newblock Documentación oficial de la API de Node.js, versión 24.1.0.
+\newblock URL: \url{https://nodejs.org/docs/latest/api/}.
 
 \bibitem{nodejs-github}
 {Node.js Contributors}.
 \newblock {Node.js JavaScript Runtime}, 2025.
 \newblock Repositorio oficial del entorno de ejecución JavaScript Node.js,
   mantenido por la comunidad y respaldado por la OpenJS Foundation.
+\newblock URL: \url{https://github.com/nodejs/node}.
 
 \bibitem{nodejs-about-es}
 {Node.js Contributors}.
 \newblock {Sobre Node.js}, 2025.
 \newblock Descripción oficial del entorno de ejecución JavaScript asíncrono
   basado en eventos, diseñado para construir aplicaciones de red escalables.
+\newblock URL: \url{https://nodejs.org/es/about}.
 
 \bibitem{openai_whisper}
 OpenAI.
-\newblock Whisper.
-\newblock \url{https://openai.com/es-ES/index/whisper/}, 2024.
+\newblock Whisper, 2024.
 \newblock Consultado el 5 de Mayo de 2025.
+\newblock URL: \url{https://openai.com/es-ES/index/whisper/}.
 
 \bibitem{whisper}
-A.~Radford, J.~W. Kim, T.~Xu, G.~Brockman, C.~McLeavey, and I.~Sutskever.
-\newblock Robust speech recognition via large-scale weak supervision.
-\newblock \url{https://github.com/openai/whisper}, 2024.
+Alec Radford, Jong~Wook Kim, Tao Xu, Greg Brockman, Christine McLeavey, and
+  Ilya Sutskever.
+\newblock Robust speech recognition via large-scale weak supervision, 2024.
+\newblock URL: \url{https://github.com/openai/whisper}.
 
 \bibitem{shapelab-rov2024}
 {Real o Virtual}.
 \newblock Shapelab 2024 (pc), 2024.
 \newblock Ficha del juego Shapelab 2024 en la base de datos de Real o Virtual,
   con detalles sobre sus características y compatibilidad en realidad virtual.
+\newblock URL:
+  \url{https://www.realovirtual.com/rovdb/juegos/25122/shapelab-2024}.
 
 \bibitem{star-trek}
 {Rob Cram}.
 \newblock Star trek bridge crew voice commands demo, 2017.
 \newblock Demostración de juego en realidad virtual de Star Trek: Bridge Crew,
   publicada por Rob Cram en YouTube.
+\newblock URL: \url{https://www.youtube.com/watch?v=FH4bY4ZG9Pw}.
 
 \bibitem{SchwaberSutherland2020}
-K.~Schwaber and J.~Sutherland.
+Ken Schwaber and Jeff Sutherland.
 \newblock {\em The Scrum Guide: A Complete Guide to the Most Popular Agile
   Framework}.
 \newblock Scrum.org, 2020.
@@ -157,29 +180,35 @@ K.~Schwaber and J.~Sutherland.
 Supereggbert.
 \newblock aframe-htmlembed-component, 2025.
 \newblock Consultado el 23 de Mayo de 2025.
+\newblock URL:
+  \url{https://github.com/supereggbert/aframe-htmlembed-component}.
 
 \bibitem{latex-project}
 {The LaTeX Project}.
 \newblock {The LaTeX Project}, 2025.
 \newblock Consultado el 14 de mayo de 2025.
+\newblock URL: \url{https://www.latex-project.org/}.
 
 \bibitem{threejs-keyframes}
 {Three.js Contributors}.
 \newblock {Three.js Example: WebGL Animation Keyframes}, 2025.
 \newblock Demostración de animación de modelos 3D utilizando fotogramas clave
   en Three.js.
+\newblock URL: \url{https://threejs.org/examples/#webgl_animation_keyframes}.
 
 \bibitem{ubisoft-star-trek}
 {Ubisoft}.
 \newblock Voice commands in star trek: Bridge crew, 2025.
 \newblock Artículo de soporte oficial que explica cómo utilizar comandos de
   voz en el juego Star Trek: Bridge Crew.
+\newblock URL:
+  \url{https://www.ubisoft.com/en-us/help/star-trek-bridge-crew/gameplay/article/voice-commands-in-star-trek-bridge-crew/000060554}.
 
 \bibitem{w3c_webxr}
 {W3C}.
-\newblock {{WebXR Device API}}.
-\newblock \url{https://www.w3.org/TR/webxr/}, 2024.
+\newblock {{WebXR Device API}}, 2024.
 \newblock [Accedido: 7 de mayo de 2025].
+\newblock URL: \url{https://www.w3.org/TR/webxr/}.
 
 \bibitem{webvr-info}
 {WebVR Contributors}.
@@ -187,18 +216,19 @@ Supereggbert.
 \newblock WebVR is an open specification that makes it possible to experience
   VR in your browser. The goal is to make it easier for everyone to get into VR
   experiences.
-
-\bibitem{whisperweb}
-Xenova.
-\newblock Whisper web - robust speech recognition in the browser.
-\newblock \url{https://huggingface.co/spaces/Xenova/whisper-web}, 2022.
-\newblock Hugging Face Space, Consultado el 6 de Mayo de 2025.
+\newblock URL: \url{https://webvr.info/}.
 
 \bibitem{whisperwebFiles}
 Xenova.
-\newblock Whisper web - robust speech recognition in the browser.
-\newblock \url{https://huggingface.co/spaces/Xenova/whisper-web/tree/main},
-  2022.
+\newblock Whisper web - robust speech recognition in the browser, 2022.
 \newblock Hugging Face Space, Consultado el 6 de Mayo de 2025.
+\newblock URL:
+  \url{https://huggingface.co/spaces/Xenova/whisper-web/tree/main}.
+
+\bibitem{whisperweb}
+Xenova.
+\newblock Whisper web - robust speech recognition in the browser, 2022.
+\newblock Hugging Face Space, Consultado el 6 de Mayo de 2025.
+\newblock URL: \url{https://huggingface.co/spaces/Xenova/whisper-web}.
 
 \end{thebibliography}

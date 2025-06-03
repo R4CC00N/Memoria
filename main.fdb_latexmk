@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1748857377.55429 "main.aux" "main.bbl" "main" 1748857383.14905 0
-  "./memoria.bib" 1748855802 11536 bc22e1932e82a600d2b1fce8638fcb4c ""
-  "C:/Users/R4CCOON/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/abbrv.bst" 1291864736 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "main.aux" 1748857382 28878 709f8c6ce68e1e9d3ff75e34877f8aef "pdflatex"
+["bibtex main"] 1748991227.62915 "main.aux" "main.bbl" "main" 1748991272.79333 0
+  "./memoria.bib" 1748974173 11345 24c6520ebfe1459abd46f24596634fbc ""
+  "C:/Users/R4CCOON/AppData/Local/Programs/MiKTeX/bibtex/bst/urlbst/plainurl.bst" 1675594511 33495 46cfb45e24a877059f9f7e142c7fc61c ""
+  "main.aux" 1748991271 29350 1420a50978a2edb52e5fbc82be4a3b78 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1748857377.82266 "d:/Documentos/URJC/vscode/LATEX/Memoria/main.tex" "main.pdf" "main" 1748857383.15006 0
-  "C:/Users/R4CCOON/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1747577057 82507 a9eef8696c92627b87e9975edea03b2a ""
+["pdflatex"] 1748991267.25886 "d:/Documentos/URJC/vscode/LATEX/Memoria/main.tex" "main.pdf" "main" 1748991272.79435 0
+  "C:/Users/R4CCOON/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1748973626 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/R4CCOON/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1745679381 13149181 f616bcb10902ad4fe00c1c35d0a3c923 ""
   "C:/Users/R4CCOON/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Users/R4CCOON/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/courier/pcrb7t.tfm" 1136765053 960 4ab65358b8406f30ef5496c8c096d22b ""
@@ -194,7 +194,7 @@
   "C:/Users/R4CCOON/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1730400552 7243 e5dac1240636811edb77568b81818372 ""
   "C:/Users/R4CCOON/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/R4CCOON/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "d:/Documentos/URJC/vscode/LATEX/Memoria/main.tex" 1748857371 146185 3873f64f47d723f568033495fb1a28ab ""
+  "d:/Documentos/URJC/vscode/LATEX/Memoria/main.tex" 1748991266 152964 5fa8e97e1275f24ef388ec86ed7bbbbf ""
   "img/Demo1_v2.png" 1746297189 133743 8ff94b7e00ca6ddc0fe4cd183f2fe18f ""
   "img/Quest3.png" 1746284106 86331 f2e5d178a12e814afeac2f1f4b17d425 ""
   "img/SceneSimple.png" 1745677351 53002 ebfd7800275058a159e57f961f4a4770 ""
@@ -216,7 +216,7 @@
   "img/componentes2.png" 1746727228 424719 1d4d8f4a5be8e14469712a8624027c76 ""
   "img/componentes3.png" 1746727971 429508 73b8189cae08d768e3ae4aa537306a8b ""
   "img/componentes4.png" 1746731219 433610 b353908725f47a4fb48fb60b3a0d22c1 ""
-  "img/componentes5.png" 1746901025 785568 84ba02fb28f2b03cc6587198a3e7d836 ""
+  "img/componentes5.png" 1748987818 792675 9daf49d1479f2e843f54c1f4b1bab1e5 ""
   "img/crearContenedor.png" 1748630623 296435 a35237f6f8b5dfcc80e648c00941170f ""
   "img/editarPEPE.png" 1748630135 208781 cfc13321228dfd9944ba64d14403d1a9 ""
   "img/eliminarPACO.png" 1748630153 194054 acab586769225f892937bb638364b9d9 ""
@@ -231,12 +231,12 @@
   "img/tabladetiempos.png" 1748641342 21748 ae7093b0bd5dae98ec1d0da80114d17b ""
   "img/threejs.png" 1748599033 701933 d3dab48cdde29866f2d654df19254d15 ""
   "img/webXR.png" 1748599463 897657 4c274f7dab3dd754bbf7c12a710995ee ""
-  "main.aux" 1748857382 28878 709f8c6ce68e1e9d3ff75e34877f8aef "pdflatex"
-  "main.bbl" 1748857377 6803 593b753427047c283d93c12356fc0232 "bibtex main"
-  "main.lof" 1748857382 3967 a5ed11a89321a84e052c1913ac0c754d "pdflatex"
-  "main.out" 1748857382 12915 12152fba53f9fbcf549e46cd8bf82429 "pdflatex"
-  "main.tex" 1748857371 146185 3873f64f47d723f568033495fb1a28ab ""
-  "main.toc" 1748857382 8344 b2ffe824d17587fbd10ca65946d8fcbe "pdflatex"
+  "main.aux" 1748991271 29350 1420a50978a2edb52e5fbc82be4a3b78 "pdflatex"
+  "main.bbl" 1748991227 8547 40fe5f09f82926d8bbf9062ed5bb1b5e "bibtex main"
+  "main.lof" 1748991271 3869 8100ecfbe8d687b52efd0d73c97a9ca4 "pdflatex"
+  "main.out" 1748991271 13793 780487a6ac4aa98531b9db174874c61b "pdflatex"
+  "main.tex" 1748991266 152964 5fa8e97e1275f24ef388ec86ed7bbbbf ""
+  "main.toc" 1748991271 8491 0149f41475c989d8662f0e8465d0add6 "pdflatex"
   (generated)
   "main.aux"
   "main.lof"

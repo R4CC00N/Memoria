@@ -1,23 +1,23 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Imagen de los modelos de Whisper extraida de su GitHub~\cite {whisper}}}{6}{figure.2.1}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Whisper Web ~\cite {whisperweb}}}{7}{figure.2.2}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Compatibilidad en exploradores segun MDN web docs ~\cite {web_speech_api}}}{9}{figure.2.3}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Imagen de los modelos de Whisper extraida de su GitHub}}{6}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Imagen de Whisper Web}}{7}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Compatibilidad en exploradores segun MDN web docs}}{9}{figure.2.3}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo basico de WebSpeechAPI}}{9}{figure.2.4}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Escena simple A-Frame}}{12}{figure.2.5}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Escena echa en three.js~\cite {threejs-keyframes}}}{14}{figure.2.6}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Escena echa en WebXR~\cite {hello-webxr}}}{15}{figure.2.7}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Escena de ejemplo en three.js}}{14}{figure.2.6}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Escena de ejemplo en WebXR}}{15}{figure.2.7}%
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Ejemplo de aplicación en WebGL}}{16}{figure.2.8}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Ejemplo de escena de Arkio~\cite {arkio-website}}}{22}{figure.2.9}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Ejemplo de uso de Shapelab~\cite {shapelab-rov2024}}}{23}{figure.2.10}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Ejemplo de uso de Star Trek~\cite {star-trek}}}{24}{figure.2.11}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Gafas Meta Quest3}}{26}{figure.2.12}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Ejemplo de escena de Arkio}}{22}{figure.2.9}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Ejemplo de uso de Shapelab}}{23}{figure.2.10}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Ejemplo de uso de voz en Star Trek Bridge Crew}}{24}{figure.2.11}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Gafas Meta Quest 3}}{26}{figure.2.12}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Funcionamiento de la segunda demo para A-Frame}}{32}{figure.3.1}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Funcionamiento de la demo de reconocimiento de voz en A-Frame}}{32}{figure.3.1}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Flujo de creación de componentes}}{34}{figure.3.2}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Flujo de creación de componentes avanzados}}{34}{figure.3.3}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Funcionamiento del comando básico Demo 4}}{35}{figure.3.4}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Funcionamiento del comando de creacion de objetos básico}}{35}{figure.3.4}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Flujo de creación de componentes avanzados}}{37}{figure.3.5}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Funcionamiento del generador de objetos con funcionalidades extra}}{38}{figure.3.6}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Flujo de creación de componentes avanzados}}{39}{figure.3.7}%
@@ -27,14 +27,14 @@
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Funcionamiento de htmlembed}}{45}{figure.3.11}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Componentes finales agregados}}{45}{figure.3.12}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Objetos en escena que puede ver el usuario.}}{49}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Creación de objetos, ejemplo 'contenedor'}}{51}{figure.4.2}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Objetos en escena que puede ver el usuario.}}{48}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Creación de objetos, ejemplo 'contenedor'}}{50}{figure.4.2}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Escena de edición con objeto resaltado}}{51}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Escena de eliminación del objeto PACO}}{52}{figure.4.4}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Escena de eliminación del objeto paco}}{52}{figure.4.4}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Escena de ayuda con los comandos posibles}}{53}{figure.4.5}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Como cerrar panel de ayuda al usuario}}{53}{figure.4.6}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Arquitectura de la Aplicación}}{59}{figure.4.7}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Tabla de tiempos de los usuarios}}{67}{figure.5.1}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Tabla de tiempos de los usuarios}}{68}{figure.5.1}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Cronograma del desarrollo del proyecto}}{73}{figure.6.1}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Cronograma del desarrollo del proyecto}}{74}{figure.6.1}%

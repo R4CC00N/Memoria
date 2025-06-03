@@ -32,11 +32,12 @@
 \usepackage[nottoc, notlot, notlof, notindex]{tocbibind} %% Opciones de índice
 \usepackage{latexsym}  %% Logo LaTeX
 \usepackage{listings}
+\renewcommand{\lstlistingname}{Listado}
 \usepackage{xcolor}
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{booktabs}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 
 \lstset{
   basicstyle=\ttfamily\footnotesize,
@@ -159,7 +160,9 @@ mi familia.}
 
 Quisiera expresar mi más sincero agradecimiento a todas las personas e instituciones que han hecho posible la realización de esta tesis de grado.
 
-En primer lugar, mi familia, durante todos estos años de estudio, por su apoyo incondicional y esfuerzo, su comprensión y aliento continuo. Su fe en mí es la mayor inspiración. Ellos siempre han dicho que la educación es la base de todo lo que puedo construir a continuación y es gracias a ellos que he podido llegar aquí. Gracias, mamá y papá
+En primer lugar, mi familia, durante todos estos años de estudio, por su apoyo incondicional y esfuerzo, su comprensión y aliento continuo. 
+Su fe en mí es la mayor aliento. 
+Ellos siempre han dicho que la educación es la base de todo lo que puedo construir a continuación y es gracias a ellos que he podido llegar aquí. Gracias, mamá y papá.
 
 A mi hermana, que ha sido un constante apoyo y de la cual quiero ser un ejemplo a seguir, que sepa que el desarrollo de uno mismo es difícil, pero satisfactorio al final.
 
@@ -177,13 +180,15 @@ A todos, mi más profunda gratitud.
 %\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
 \markboth{RESUMEN}{RESUMEN} % encabezado
 
+En este trabajo de fin de grado se ha investigado la integración de técnicas de reconocimiento de voz en entornos 3D.
+Como resultado, se ha creado un prototipo de creación y edición de escenas mediante comandos de voz, usando la unión del framework llamado A-Frame y una API de reconocimiento de voz. 
+Así, creando una caja de herramientas con componentes reutilizables y modulares en A-Frame.
+
+Los sistemas de realidad virtual y aumentada cada vez son más importantes porque permiten experiencias inmersivas intentando emular el mundo real.
 En la actualidad, se están explorando nuevas interfaces en realidad virtual (VR) y realidad aumentada (AR). Entre ellas, una de las más interesantes es la utilización de voz, ya que parte como una de las más prometedoras para mejorar la inmersión y la usabilidad.
 El objetivo es explorar cómo esta tecnología puede transformar la manera en la que se puede llegar a consumir el contenido digital.
 
-Por ello, se ha realizado este trabajo que une la investigación de técnicas de reconocimiento de voz y su aplicación en entornos 3D, dando como resultado un prototipo de creación y edición de escenas mediante comandos de voz, usando la unión del framework llamado A-Frame y una API de reconocimiento de voz. 
-Así, creando una caja de herramientas con componentes reutilizables y modulares en A-Frame.
-
-Este proyecto es importante por varias razones. 
+Hay varios aspectos a destacar en este proyecto.
 En primer lugar, se desarrolló un sistema de componentes que permite incorporar voz a cualquier escena hecha con A-Frame.
 Esto es muy relevante, ya que A-Frame es una de las plataformas más populares para la creación de escenas en realidad virtual que funcionan sobre un navegador.
 Además de esta funcionalidad, también se añaden componentes modulares que no solo facilitan la incorporación de comandos, sino que también abren la puerta al diseño de diferentes aplicaciones usando esta caja de herramientas.
@@ -196,9 +201,17 @@ Esto no solo mejora la accesibilidad y la experiencia de usuario, sino que tambi
 %\addcontentsline{toc}{chapter}{Summary} % si queremos que aparezca en el índice
 \markboth{SUMMARY}{SUMMARY} % encabezado
 
-Here comes a translation of the ``Resumen'' into English. 
-Please, double check it for correct grammar and spelling.
-As it is the translation of the ``Resumen'', which is supposed to be written at the end, this as well should be filled out just before submitting.
+In this thesis, we have investigated the integration of voice recognition techniques in 3D environments.
+As a result, a prototype for creating and editing scenes using voice commands has been developed, by combining the A-Frame framework with a speech recognition API.
+Thus, creating a toolbox with reusable and modular components in A-Frame.
+
+Virtual and augmented reality systems are becoming increasingly important because they enable immersive experiences that try to emulate the real world.
+Currently, new interfaces are being explored in virtual reality (VR) and augmented reality (AR). Among these, one of the most interesting is the use of voice, as it stands out as one of the most promising ways to improve immersion and usability.
+The goal is to explore how this technology can transform the way digital content is consumed.
+
+There are several notable aspects of this project.
+First, a component system was developed that allows the integration of voice commands into any scene created with A-Frame. This is highly relevant, as A-Frame is one of the most popular platforms for building browser-based virtual reality scenes.
+In addition to this functionality, modular components were also added. These not only simplify the incorporation of voice commands but also open the door to designing diverse applications using this toolbox. This not only enhances accessibility and user experience but also drives innovation in VR/AR interface design.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -236,7 +249,7 @@ Con el gran avance en tecnologías, la realidad virtual (VR) ha experimentado un
 Actualmente, existe una búsqueda para nuevas interfaces de usuario y forma de interaccionar en la escena que superen las limitaciones de las formas tradicionales, como son el teclado, controles físicos o gestos manuales.
 
 La interacción natural se vuelve un punto clave, en donde se están explorando diferentes modos que permitan al usuario interactuar con entornos 3D de manera más intuitiva.
-Aquí es donde el reconocimiento del habla cobra más importancia, la integración de comandos de voz permite al usuario manipular objetos o activar funciones sin necesidad de interfaces tangibles.
+Aquí es donde el reconocimiento del habla cobra más importancia. La integración de comandos de voz permite al usuario manipular objetos o activar funciones sin necesidad de interfaces tangibles.
 Esto no solo es una mejora en la accesibilidad, sino que también aumenta la inmersión, ya que la interacción con la escena se siente más natural y fluida, acercándose a cómo se interactúa en el mundo real. 
 Por ello, el reconocimiento de voz se vuelve un punto importante en la mejora del potencial en experiencias de realidad virtual o aumentada.
 
@@ -268,14 +281,14 @@ basado en un sistema de componentes que demuestre la viabilidad de la creación 
 
 \begin{itemize}
 \setlength\itemsep{0.3em}  % Espacio entre ítems
-\item Explorar qué opciones se tienen para 'Speech-to-text' en un navegador y en dispositivos tipo Quest3.
+\item Explorar qué opciones se tienen para 'Speech-to-text' en un navegador y en dispositivos tipo Quest 3.
 \item Conseguir transcripciones del usuario con la aplicación.
 \item Reconocimiento de órdenes concretas para interactuar con el editor de escenas.
-\item Explorar distintas soluciones para encontrar una que funcione bien en gafas tipo Quest3 y otra en el navegador de escritorio.
+\item Explorar distintas soluciones para encontrar una que funcione bien en gafas tipo Quest 3 y otra en el navegador de escritorio.
 \item Hacer que el prototipo soporte comandos como crear, editar, eliminar\dots
 \item Realización de un prototipo modular.
 \item Construir un prototipo funcional en navegadores
-\item Construir un prototipo funcional en equipos VR/AR como las gafas Quest3.
+\item Construir un prototipo funcional en equipos VR/AR como las gafas Quest 3.
 \item Utilizar para la construcción el framework A-Frame, porque se adapta especialmente bien a los objetivos anterior.
 \end{itemize}
 
@@ -325,27 +338,27 @@ El reconocimiento de voz en navegadores permite a los usuarios interactuar con a
 
 \subsection{Whisper}
 
-En primera instancia, se planeaba trabajar con Whisper, un modelo de 'Speech Recognition' de OpenAI que se destaca por su capacidad para transcribir audio en múltiples idiomas con alta precisión, incluso en condiciones de ruido o con variaciones en el acento del hablante.
+En primera instancia, se planeaba trabajar con Whisper\footnote{Whisper OpenAI: \scriptsize\url{https://openai.com/es-ES/index/whisper/}.}~\cite{openai_whisper}, un modelo de 'Speech Recognition' (reconocimiento de voz) de OpenAI que se destaca por su capacidad para transcribir audio en múltiples idiomas con alta precisión, incluso en condiciones de ruido o con variaciones en el acento del hablante.
 
-Whisper~\cite{openai_whisper}\footnote{Whisper OpenAI: \scriptsize\url{https://openai.com/es-ES/index/whisper/}.} jugaba una parte esencial. Se eligió debido a la arquitectura robusta y de código libre. Como parte de la investigación, se analizaron los requisitos técnicos para la implementación, incluyendo dependencias, consumo de recursos, y compatibilidad con otros componentes del sistema.
+Whisper tiene una arquitectura robusta y de código libre. Como parte de la investigación, se analizaron los requisitos técnicos para la implementación, incluyendo dependencias, consumo de recursos, y compatibilidad con otros componentes del sistema.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\linewidth]{img/Whisper_github.png}
-    \caption{Imagen de los modelos de Whisper extraida de su GitHub~\cite{whisper}}
+    \caption[Imagen de los modelos de Whisper extraida de su GitHub]{Imagen de los modelos de Whisper extraida de su GitHub~\cite{whisper}}
     \label{fig:models-Whisper}
 \end{figure}
 
 Whisper presenta los modelos que se pueden ver en la Figura~\ref{fig:models-Whisper}. Se pueden observar diferentes tamaños de modelos, cada uno con distintos niveles de precisión, velocidad y requerimientos de hardware.
 
-Los modelos más grandes (medium, large)son altamente demandantes de GPU, esto hace que los modelos tengan mucha más precisión, pero que su velocidad sea más afectada. Para una menor latencia, los modelos más pequeños (tiny, base, small) son mejores, ya que su demanda de hardware es menor.
+Los modelos más grandes (medium, large) son altamente demandantes de GPU, esto hace que los modelos tengan mucha más precisión, pero que su velocidad sea más afectada. Para una menor latencia, los modelos más pequeños (tiny, base, small) son mejores, ya que su demanda de hardware es menor.
 
 Alguno de los problemas que presentó Whisper fue el tamaño de los modelos, ya que incluso el modelo más pequeño (tiny) pesa varios cientos de MB. 
 Otro problema es la necesidad de PyTorch y otras dependencias que no están disponibles en entornos web estándar. Además del uso intensivo de GPU/CPU, lo cual no es viable en la mayoría de navegadores móviles o de escritorio.
 
 \subsection{Whisper Web}
 
-Actualmente, algunos proyectos han empezado a portar versiones ligeras al navegador (construcciones en WebAssembly u ONNX). Un ejemplo de esto es Whisper Web~\cite{whisperwebFiles}\footnote{Demo oficial en: \scriptsize\url{https://huggingface.co/spaces/Xenova/whisper-web}}.
+Actualmente, algunos proyectos han empezado a portar versiones ligeras al navegador (construcciones en WebAssembly u ONNX). Un ejemplo de esto es Whisper Web\footnote{Demo oficial en: \scriptsize\url{https://huggingface.co/spaces/Xenova/whisper-web}}~\cite{whisperwebFiles}.
 
 En la Figura~\ref{fig:WhisperWeb} se muestra un proyecto de la comunidad que busca llevar Whisper al navegador, sin la necesidad de un back-end. Para ello se usan tecnologías como:
 \begin{itemize}
@@ -357,7 +370,7 @@ En la Figura~\ref{fig:WhisperWeb} se muestra un proyecto de la comunidad que bus
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\linewidth]{img/WhisperWeb.png}
-    \caption{Whisper Web ~\cite{whisperweb}}
+    \caption[Imagen de Whisper Web]{Imagen de Whisper Web ~\cite{whisperweb}}
     \label{fig:WhisperWeb}
 \end{figure}
 
@@ -378,17 +391,17 @@ Además, el peso de los modelos de en sus versiones más pequeñas, puede afecta
 
 \subsection{Web Speech API}
 
-La principal tecnología nativa para reconocimiento de voz directamente en los navegadores es la Web Speech API, específicamente su interfaz SpeechRecognition~\cite{web_speech_api}.
+La principal tecnología nativa para reconocimiento de voz directamente en los navegadores es la Web Speech API\footnote{Web Speech API según Julius Adorf}~\cite{adorf2013web}, específicamente su interfaz SpeechRecognition~\cite{web_speech_api}.
 
-La Web Speech API~\cite{adorf2013web}\footnote{Web Speech API según Julius Adorf} fue diseñada para el análisis y síntesis de voz, creando la posibilidad al usuario de enviar voz a aplicaciones web. Dichos audios pueden ser transformados en texto.
-Fue introducida como un borrador por el W3C\footnote{W3C: \scriptsize\url{https://www.w3.org/}} (World Wide Web Consortium) en 2012. Aunque algunas partes de la API, como la síntesis de voz (SpeechSynthesis), han alcanzado un estado de recomendación, la parte de reconocimiento de voz (SpeechRecognition) aún se considera un borrador de trabajo. Sin embargo, ha sido implementada en la mayoría de los navegadores modernos, aunque con diferentes niveles de soporte y posibles requisitos de prefijos específicos del navegador (ej.: webkitSpeechRecognition en Chrome), por ejemplo el uso de esta API en navegadores específicos para gafas VR/AR como las Quest3 es directamente imposible, debido a que no hay soporte para ello, por esto lo más factible para el uso de reconocimiento de voz en casos como estos es usar un back-end que reciba las peticiones y chuncks de audio del cliente y está mismo las transcriba devolviendo así el texto transcrito.
+La Web Speech API fue diseñada para el análisis y síntesis de voz, creando la posibilidad al usuario de enviar voz a aplicaciones web. Dichos audios pueden ser transformados en texto.
+Fue introducida como un borrador por el W3C\footnote{W3C: \scriptsize\url{https://www.w3.org/}} (World Wide Web Consortium) en 2012. Aunque algunas partes de la API, como la síntesis de voz (SpeechSynthesis), han alcanzado un estado de recomendación, la parte de reconocimiento de voz (SpeechRecognition) aún se considera un borrador de trabajo. Sin embargo, ha sido implementada en la mayoría de los navegadores modernos, aunque con diferentes niveles de soporte y posibles requisitos de prefijos específicos del navegador (ej.: webkitSpeechRecognition en Chrome), por ejemplo el uso de esta API en navegadores específicos para gafas VR/AR como las Quest 3 es directamente imposible, debido a que no hay soporte para ello, por esto lo más factible para el uso de reconocimiento de voz en casos como estos es usar un back-end que reciba las peticiones y chuncks de audio del cliente y está mismo las transcriba devolviendo así el texto transcrito.
 
-El uso principal que le daríamos para este proyecto será el 'SpeechRecognition' para convertir la voz en texto. Es cierto que la compatibilidad de navegadores es muy grande, pero el soporte de SpeechRecognition no es estándar aún, y muchos navegadores solo lo permiten con el prefijo webkit (webkitSpeechRecognition). Funciona principalmente en Chrome y navegadores basados en Chromium, como se ve en la Figura~\ref{fig:SpeechRecognitionAPI}.
+En este proyecto se usará el 'SpeechRecognition' para convertir la voz en texto. Es cierto que la compatibilidad de navegadores es muy grande, pero el soporte de SpeechRecognition no es estándar aún, y muchos navegadores solo lo permiten con el prefijo webkit (webkitSpeechRecognition). Funciona principalmente en Chrome y navegadores basados en Chromium, como se ve en la Figura~\ref{fig:SpeechRecognitionAPI}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{img/WebSpeechAPI.png}
-    \caption{Compatibilidad en exploradores segun MDN web docs ~\cite{web_speech_api}}
+    \caption[Compatibilidad en exploradores segun MDN web docs]{Compatibilidad en exploradores segun MDN web docs ~\cite{web_speech_api}}
     \label{fig:SpeechRecognitionAPI}
 \end{figure}
 
@@ -408,7 +421,7 @@ Por otro lado, no todas son ventajas, existen limitaciones para el uso de esta A
 
 \subsection{AssemblyAI}
 
-Assembly AI~\cite{assemblyai_about}\footnote{Documentación de Assembly: \url{https://www.assemblyai.com/docs}.} es una plataforma de Inteligencia Artificial que ofrece potentes APIs para el procesamiento de audio, incluyendo reconocimiento de voz (Speech-to-Text), comprensión del lenguaje natural (NLP) y otras funcionalidades de inteligencia de audio.
+Assembly AI\footnote{Documentación de Assembly: \url{https://www.assemblyai.com/docs}.}~\cite{assemblyai_about} es una plataforma de Inteligencia Artificial que ofrece potentes APIs para el procesamiento de audio, incluyendo reconocimiento de voz (Speech-to-Text), comprensión del lenguaje natural (NLP) y otras funcionalidades de inteligencia de audio.
 
 Cuenta con características similares a Web Speech API, salvo que tiene algunas mejoras en otros puntos.
 
@@ -416,20 +429,20 @@ Assembly AI se enfoca en ofrecer modelos de reconocimiento de voz de última gen
 
 La API es robusta y escalable, fue diseñada para desarrolladores que necesitan integrar capacidades de reconocimiento de voz en aplicaciones complejas y a gran escala. Por ello al ser una API externa, funciona de manera consistente en diferentes navegadores y plataformas, su uso en navegadores se realizará a través de una API REST y las respuestas se reciben como respuesta a dicha API por esto requiere una conexión a internet activa para enviar y recibir datos de la API. Assembly AI es un servicio comercial y tiene costos asociados en función del volumen de audio procesado, aunque a menudo ofrecen planes gratuitos o de prueba.
 
-Finalmente, usamos esta tecnología para el proyecto en una segunda demo para el uso de gafas VR/AR, debido a que los navegadores de Meta de las gafas de pruebas no soportaban el manejo de la API anterior de Web Speech Recognition.
+Finalmente, se usa esta tecnología para el proyecto en una segunda demo para el uso de gafas VR/AR, debido a que los navegadores de Meta de las gafas de pruebas no soportaban el manejo de la API anterior de Web Speech Recognition.
 
 \section{A-Frame} 
 \label{sec:seccion2}
-Para la implementación en AR/VR se usó A-Frame~\cite{aframe2025docs}\footnote{A-Frame:\scriptsize\url{https://aframe.io/}.}, este es un framework web de código abierto usado para el desarrollo de experiencias en realidad virtual y aumentada. Utilizando HTML como lenguaje principal para la definición de escenas. Este framework se basa en Three.js, el cual es una biblioteca de JavaScript para gráficos en 3D.
+Para la implementación en AR/VR se usó A-Frame\footnote{A-Frame:\scriptsize\url{https://aframe.io/}.}~\cite{aframe2025docs}, este es un framework web de código abierto usado para el desarrollo de experiencias en realidad virtual y aumentada. Utilizando HTML como lenguaje principal para la definición de escenas. Este framework se basa en Three.js, el cual es una biblioteca de JavaScript para gráficos en 3D.
 
 A-Frame se caracteriza por el uso simplificado de Three.js para la creación de escenas, evitando el directo y complejo gestionamiento de los detalles de renderización en 3D.
 
-Usando una arquitectura llamada ECS (Entity Components System) que es aplicada a los videojuegos, en donde cada objeto es una entidad diferenciada, que puede o no albergar otras entidades. Debemos tener en cuenta que para acceder a la librería de este framework debemos usar la línea de código del Listing~\ref{lst:acceso_A-Frame}. Esta etiqueta \texttt{<script>} permite cargar la versión 1.7.0 de A-Frame directamente desde la web. Dicha versión puede variar.
+Usando una arquitectura llamada ECS (Entity Components System) que es aplicada a los videojuegos, en donde cada objeto es una entidad diferenciada, que puede o no albergar otras entidades. Se debe tener en cuenta que para acceder a la librería de este framework se puede usar la línea de código del Listado~\ref{lst:acceso_A-Frame}. Esta etiqueta \texttt{<script>} permite cargar la versión 1.6.0 de A-Frame directamente desde la web. Dicha versión puede variar.
 \begin{lstlisting}[language=HTML, caption=Línea de código de A-Frame, captionpos=b,label=lst:acceso_A-Frame]
-  <script src='https://aframe.io/releases/1.7.0/aframe.min.js'></script>
+  <script src='https://aframe.io/releases/1.6.0/aframe.min.js'></script>
 \end{lstlisting}
 
-Una de las características más claras de A-Frame es la definición de entidades utilizando un etiquetado similar al de HTML. Esto permite a desarrolladores construir mundos virtuales de manera rápida y simple, como se observa en este fragmento de código del Listing~\ref{lst:a-scene_Figure} y en la Figura~\ref{fig:aframe-scene}.
+Una de las características más claras de A-Frame es la definición de entidades utilizando un etiquetado similar al de HTML. Esto permite a desarrolladores construir mundos virtuales de manera rápida y simple, como se observa en este fragmento de código del Listado~\ref{lst:a-scene_Figure} y en la Figura~\ref{fig:aframe-scene}.
 
 \begin{lstlisting}[language=HTML, caption=Escena A-Frame básica, captionpos=b,label=lst:a-scene_Figure]
       <a-scene>
@@ -449,7 +462,7 @@ Una de las características más claras de A-Frame es la definición de entidade
 
 Cada entidad de esta escena tiene sus propiedades especificadas en la página de la documentación de A-Frame\footnote{Primitivas de A-Frame: \scriptsize\url{https://aframe.io/docs/1.7.0/introduction/html-and-primitives.html}}.
 
-El núcleo de A-Frame es su sistema de \textbf{entidades-componentes}. Las \textbf{entidades}\footnote{Detalles sobre entidades de A-Frame: \scriptsize\url{https://aframe.io/docs/1.6.0/core/entity.html}} son objetos genéricos que adquieren propiedades y comportamientos mediante componentes. Los \textbf{componentes}\footnote{Detalles sobre componentes de A-Frame: \scriptsize\url{https://aframe.io/docs/1.6.0/core/component.html}} son módulos reutilizables que añaden comportamientos, propiedades visuales, interacciones y varias acciones más a las entidades. A-Frame proporciona componentes predefinidos (position, rotation, scale, material, geometry\ldots). Se puede observar en el Listing~\ref{lst:componente}, el componente añade una entidad con un \texttt{<a-text>} que dará una información al usuario.
+El núcleo de A-Frame es su sistema de \textbf{entidades-componentes}. Las \textbf{entidades}\footnote{Detalles sobre entidades de A-Frame: \scriptsize\url{https://aframe.io/docs/1.6.0/core/entity.html}} son objetos genéricos que adquieren propiedades y comportamientos mediante componentes. Los \textbf{componentes}\footnote{Detalles sobre componentes de A-Frame: \scriptsize\url{https://aframe.io/docs/1.6.0/core/component.html}} son módulos reutilizables que añaden comportamientos, propiedades visuales, interacciones y varias acciones más a las entidades. A-Frame proporciona componentes predefinidos (position, rotation, scale, material, geometry\ldots). Se puede observar en el Listado~\ref{lst:componente}, el componente añade una entidad con un \texttt{<a-text>} que dará una información al usuario.
 
 \begin{lstlisting}[language=HTML, caption=Crear Componente, captionpos=b, label=lst:componente]
   AFRAME.registerComponent('text-message', {
@@ -482,7 +495,7 @@ Una entidad puede tener muchos componentes a la vez. Se pueden modificar los val
 \section{Three.js} 
 \label{sec:seccion3}
 
-Como mencionamos anteriormente, A-Frame se construye sobre la potente biblioteca de gráficos 3D Three.js~\cite{dirksen2013learning}\footnote{Learning Three.js: The JavaScript 3D Library for WebGL.}\footnote{Three.js:\scriptsize\url{https://threejs.org/}.} el cual es una biblioteca de JavaScript que facilita la creación de gráficos 3D. A-Frame abstrae la complejidad de Three.js, permitiendo a los desarrolladores centrarse en la creación de contenido sin tener que lidiar directamente con la configuración de WebGL, shaders, matrices, etc. Sin embargo, para necesidades más avanzadas, los desarrolladores pueden acceder directamente al objeto Three.js subyacente dentro de los componentes personalizados de A-Frame.
+Como se mencionó anteriormente, A-Frame se construye sobre la potente biblioteca de gráficos 3D Three.js\footnote{Learning Three.js: The JavaScript 3D Library for WebGL.}\footnote{Three.js:\scriptsize\url{https://threejs.org/}.}~\cite{dirksen2013learning} el cual es una biblioteca de JavaScript que facilita la creación de gráficos 3D. A-Frame abstrae la complejidad de Three.js, permitiendo a los desarrolladores centrarse en la creación de contenido sin tener que lidiar directamente con la configuración de WebGL, shaders, matrices, etc. Sin embargo, para necesidades más avanzadas, los desarrolladores pueden acceder directamente al objeto Three.js subyacente dentro de los componentes personalizados de A-Frame.
 Con Three.js, puedes crear y manipular formas básicas como cubos o esferas, importar modelos complejos (en formatos como GLTF), aplicar materiales y texturas, e iluminar escenas con luces realistas. Además, incluye cámaras y controles intuitivos para navegar, así como soporte para animaciones fluidas. 
 
 La construcción de escenas mediante Three.js utilizará componentes como:
@@ -502,13 +515,13 @@ Un ejemplo claro es la Figura~\ref{fig:threejs} en donde se puede observar el po
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{img/threejs.png}
-    \caption{Escena echa en three.js~\cite{threejs-keyframes}}
+    \caption[Escena de ejemplo en three.js]{Escena de ejemplo en three.js~\cite{threejs-keyframes}}
     \label{fig:threejs}
 \end{figure}
 
 \section{WebXR} 
 \label{sec:seccion4}
-Contextualizando este apartado, debemos conocer la historia y desarrollo de WebXR. Fue desarrollada bajo las especificaciones del consorcio de W3C~\cite{w3c_webxr} (World Wide Web)\footnote{WebXR según W3C.}.
+Contextualizando este apartado, se tiene que conocer la historia y desarrollo de WebXR. Fue desarrollada bajo las especificaciones del consorcio de W3C~\cite{w3c_webxr} (World Wide Web)\footnote{WebXR según W3C.}.
 
 Su predecesor fue WebVR:
 \begin{quote}
@@ -517,7 +530,7 @@ Su predecesor fue WebVR:
 
 Esta era una API experimental creada únicamente para el desarrollo en realidad virtual. Este estándar fue algo fundamental para el desarrollo actual, pero presentaba varias limitaciones, ya que no abordaba los problemas relacionados con la realidad aumentada. La evolución y la integración de la realidad aumentada es la que creó el actual WebXR.
 
-WebXR(Web Extended Reality) es un conjunto de tecnologías web que permite crear experiencias en realidad virtual (VR) y en realidad aumentada (AR) dentro de navegadores. Esto implica que cualquier usuario puede acceder a estas experiencias sin necesidad de descargar aplicaciones separadas.
+WebXR (Web Extended Reality) es un conjunto de tecnologías web que permite crear experiencias en realidad virtual (VR) y en realidad aumentada (AR) dentro de navegadores. Esto implica que cualquier usuario puede acceder a estas experiencias sin necesidad de descargar aplicaciones separadas.
 
 WebXR presenta varias funcionalidades como: 
 
@@ -534,7 +547,7 @@ Estas funcionalidades mencionadas más otras, crean las beneficiosas caracterís
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{img/webXR.png}
-    \caption{Escena echa en WebXR~\cite{hello-webxr}}
+    \caption[Escena de ejemplo en WebXR]{Escena de ejemplo en WebXR~\cite{hello-webxr}}
     \label{fig:webXRfig}
 \end{figure}
 \cleardoublepage
@@ -543,7 +556,7 @@ Estas funcionalidades mencionadas más otras, crean las beneficiosas caracterís
 
 WebGL surgió por la necesidad de llevar los gráficos 3D directamente a un navegador. Antes de que los gráficos 3D se limitaban a tecnologías basadas en plugins como 'Adobe Flash' o renderización puramente con JavaScript, esto resultaba en una caída abrupta de rendimiento.
 
-Creada en 2007 por el grupo Khronos~\cite{webgl-khronos}\footnote{Khronos Group: \scriptsize\url{https://www.khronos.org/webgl/}.} fue desarrollada basándose en una API conocida como OpenGL ES 2.0 diseñada para dispositivos embebidos.
+Creada en 2007 por el grupo Khronos\footnote{Khronos Group: \scriptsize\url{https://www.khronos.org/webgl/}.}~\cite{webgl-khronos} fue desarrollada basándose en una API conocida como OpenGL ES 2.0 diseñada para dispositivos embebidos.
 \begin{quote}
 \textit{'WebGL (Web Graphics Library) is a JavaScript API for rendering high-performance interactive 3D and 2D graphics within any compatible web browser without the use of plug-ins. WebGL does so by introducing an API that closely conforms to OpenGL ES 2.0.'~\cite{webgl-mdn}\footnote{Cita según MDN web docs}}  
 \end{quote}
@@ -564,21 +577,25 @@ La multiplataformeidad que ofrece WebGL permite que se pueda ejecutar en cualqui
 \section{HTML} 
 \label{sec:seccion6}
 
-HTML\footnote{HTML W3C ~\cite{w3c-html-intro}.}(HyperText Markup Language) fue inventado por Tim Berners-Lee en el CERN (Organización Europea para la Investigación Nuclear) a principios de la década de 1990. Se buscaba que los científicos pudieran compartir información fácilmente a través de una red, en donde el hipertexto de HTML jugaba una parte esencial.
+HTML\footnote{HTML W3C ~\cite{w3c-html-intro}.} fue inventado por Tim Berners-Lee en el CERN (Organización Europea para la Investigación Nuclear) a principios de la década de 1990. Se buscaba que los científicos pudieran compartir información fácilmente a través de una red, en donde el hipertexto de HTML jugaba una parte esencial.
 \begin{quote}
 \textit{'HTML (HyperText Markup Language) is the set of markup symbols or codes inserted in a file intended for display on a World Wide Web browser page. The markup tells the web browser how to display a web page's words and images for the user.'} \cite{w3c-html-intro}  
 \end{quote}
 
 Esta definición de W3C muestra el propósito del HTML. A medida que la web evolucionó, HTML también lo hizo creando diferentes versiones que se iban adaptando al uso de navegadores.
 
-La versión más moderna, el HTML5, introdujo una gran cantidad de características, como el soporte multimedia de audio y video, además de la posibilidad de Canvas para gráficos 2D.
+La versión más moderna, el HTML5~\cite{gauchat2012gran}, es un conjunto de estándares y tecnologías web que ofrece una experiencia más interactiva y eficiente al usuario. 
+Es el lugar donde las aplicaciones cobran vida, y el centro de todo son los navegadores. Cada navegador cuenta con una máquina de JavaScript que es el encargado de la interactividad de la página. 
+Como complemento, se introdujo CSS, que se encarga de la presentación y estilos visuales de las páginas HTML.
+Para gráficos 3D, HTML5 se une con WebGL, permitiendo renderizado de gráficos avanzados en 3D acelerados por el propio hardware del navegador.
+Además, introdujo una gran cantidad de características, como el soporte multimedia de audio y video, además de la posibilidad de Canvas para gráficos 2D.
 Incorporó además un conjunto de APIs para aplicaciones web que permiten funcionalidades avanzadas.
 
-El HTML5~\cite{gauchat2012gran} como tal se conoce como lenguaje de marcado, lo que significa que utiliza etiquetas (tags) para estructurar el contenido. Estas etiquetas indican el significado y la presentación de diferentes elementos (encabezados, párrafos, imágenes, enlaces, etc.). 
+El HTML5 como tal se conoce como lenguaje de marcado, lo que significa que utiliza etiquetas (tags) para estructurar el contenido. Estas etiquetas indican el significado y la presentación de diferentes elementos (encabezados, párrafos, imágenes, enlaces, etc.). 
 Los documentos HTML5 cuentan con una estructura jerárquica basada en el anidamiento de elementos; esto permite introducir elementos o etiquetas dentro de otras, definiendo una relación entre dichos objetos de 'Padre-Hijo'.
 
 Es importante recordar que la mayoría de las etiquetas usadas en HTML en general se deben cerrar tras su uso, aunque existen excepciones.
-\cleardoublepage
+
 \section{JavaScript} 
 \label{sec:seccion7}
 
@@ -590,7 +607,7 @@ Es importante recordar que la mayoría de las etiquetas usadas en HTML en genera
 JavaScript~\cite{mdn_javascript_data_structures}~\cite{flanagan2002javascript} fue diseñado originalmente para ejecutarse en el navegador del cliente (front-end). 
 Se caracteriza por la posibilidad de ser ejecutado línea a línea por el navegador, sin tener que compilarse antes de ello, además al ser un lenguaje de alto nivel facilita la escritura y comprensión de código, además también cuenta con un tipado de variables lo que significa que dichas 'variables' pueden cambiar a lo largo de la ejecución. 
 
-Actualmente, se rige por el estándar ECMAScript; este asegura la interoperabilidad y evolución. Debido a este estándar y el desarrollo de API Web, ha podido transcender al navegador,
+Actualmente, se rige por el estándar ECMAScript (la última versión es la ES2023\footnote{Documentación ECMAScript2023: \scriptsize\url{https://tc39.es/ecma262/2023/}}); este asegura la interoperabilidad y evolución. Debido a este estándar y el desarrollo de API Web, ha podido transcender al navegador,
 esto hace que hoy en día también se pueda usar en el lado del servidor (back-end) con entornos como Node.js, así como en desarrollo de aplicaciones móviles y de escritorio.
 
 \begin{itemize}
@@ -608,7 +625,7 @@ A lo largo del desarrollo del proyecto se ha usado en diferentes escenarios, des
 \cleardoublepage
 \section{CSS}
 \label{sec:seccion8}
-CSS (Cascading Style Sheets) es como la cobertura y la decoración de una página web (el HTML sería el esqueleto). Se usa para decirle al navegador cómo mostrar los elementos de HTML: qué colores usar, qué fuentes, cómo se deben organizar en la pantalla, si deben tener márgenes, bordes, etc.
+CSS~\cite{gauchat2012gran} (Cascading Style Sheets) es como la cobertura y la decoración de una página web (el HTML sería el esqueleto). Se usa para decirle al navegador cómo mostrar los elementos de HTML: qué colores usar, qué fuentes, cómo se deben organizar en la pantalla, si deben tener márgenes, bordes, etc.
 Gracias a CSS, es posible crear interfaces web atractivas, responsivas y coherentes en distintos dispositivos.
 Para su uso se podrá utilizar de la siguiente forma:
 
@@ -638,7 +655,7 @@ Para su uso se podrá utilizar de la siguiente forma:
       \caption{Formas de aplicar CSS en un documento HTML}
       \label{tab:formas-css}
       \end{table}
-  Esta tecnología la usamos particularmente en una sección en la que mezclamos un HTML con estilos dentro de un panel de A-Frame conocido como 'HTML Embed Component'~\cite{aframeComponent}.
+  Esta tecnología se usa particularmente en una sección en la que se une un HTML con estilos dentro de un panel de A-Frame conocido como 'HTML Embed Component'~\cite{aframeComponent}.
 
 \cleardoublepage
 
@@ -668,17 +685,19 @@ Node.js es excelente para manejar peticiones HTTP, tanto para crear servidores w
 
   \item \textbf{Streams:} Node.js utiliza \textit{streams} para manejar grandes cantidades de datos de manera eficiente durante las peticiones y respuestas, evitando cargar todo en la memoria.
 \end{itemize}
-\subsection{Certificados}
-Para asegurar las comunicaciones a través de la web (HTTPS), Node.js permite trabajar con certificados SSL/TLS. Estos certificados constan:
+\subsection{Certificados SSL/TLS}
+Para asegurar las comunicaciones a través de la web (HTTPS), Node.js permite trabajar con certificados SSL/TLS. 
+Estos certificados son credenciales digitales que cumplen una función fundamental en la seguridad de las comunicaciones por internet. Son la base sobre la que se construye la confianza en línea y la protección de datos. 
+Estos certificados constan:
 
 \begin{itemize}
- \item \textbf{Clave privada(.key):} Archivo que se usa para encriptar la información que el servidor envía y desencripta la información que reciba.
- \item \textbf{Clave pública(.crt):} Archivo que contiene la clave pública del servidor y la información de identificación.
+ \item \textbf{Clave privada (.key) :} Archivo que se usa para encriptar la información que el servidor envía y desencripta la información que reciba.
+ \item \textbf{Clave pública (.crt) :} Archivo que contiene la clave pública del servidor y la información de identificación.
  \item \textbf{Certificado de Autoridad(.ca, .pem o .crt):} Archivos que son necesarios para construir una cadena de confianza entre el usuario y el servidor, deben estar firmados por una autoridad de certificación, pero para pruebas locales puede ir autofirmado.
 \end{itemize}
 
 
-\section{Aplicaciones de inspiración al proyecto}
+\section{Aplicaciones relacionadas}
 \label{sec:seccion10}
 
 En este apartado se mencionarán aplicaciones que, desde algunos puntos de vista, están relacionadas con el proyecto o han servido de inspiración para el desarrollo del proyecto.
@@ -690,7 +709,7 @@ En este apartado se mencionarán aplicaciones que, desde algunos puntos de vista
 \begin{figure}[H]  % Puedes quitar la opción [htbp] si no necesitas que esté en esa posición exacta
   \centering
   \includegraphics[width=0.8\linewidth]{img/arkio.png}  % Ajusta el tamaño con width o height
-  \caption{Ejemplo de escena de Arkio~\cite{arkio-website}}  % Opcional: agrega una leyenda a la imagen
+  \caption[Ejemplo de escena de Arkio]{Ejemplo de escena de Arkio~\cite{arkio-website}}  % Opcional: agrega una leyenda a la imagen
   \label{fig:arkio}  % Opcional: añade una etiqueta para referenciar la imagen
 \end{figure}
 
@@ -698,7 +717,7 @@ En este apartado se mencionarán aplicaciones que, desde algunos puntos de vista
   \item Se centra en el diseño de interiores, edificios, espacios virtuales y planificación urbana.
   \item Facilita la colaboración multiplataforma en tiempo real como se ve en la Figura~\ref{fig:arkio}.
   \item Dispone de plugins para integrar con herramientas de diseño 3D como \texttt{Revit}, \texttt{Rhino} y \texttt{SketchUp}, permitiendo importar modelos existentes y exportar el trabajo realizado en Arkio.
-  \item Arkio permite a los usuarios dibujar y manipular elementos arquitectónicos de forma intuitiva en el espacio VR mediante el uso de los mandos de que traen las gafas como la Quest3.
+  \item Arkio permite a los usuarios dibujar y manipular elementos arquitectónicos de forma intuitiva en el espacio VR mediante el uso de los mandos de que traen las gafas como la Quest 3.
 \end{itemize}
 
 \subsection{VR Sculpting}
@@ -715,7 +734,7 @@ Si bien esto no es la creación del objeto desde cero con la voz, sí permite un
 \begin{figure}[H]  % Puedes quitar la opción [htbp] si no necesitas que esté en esa posición exacta
   \centering
   \includegraphics[width=0.8\linewidth]{img/Shapelab.jpg}  % Ajusta el tamaño con width o height
-  \caption{Ejemplo de uso de Shapelab~\cite{shapelab-rov2024}}  % Opcional: agrega una leyenda a la imagen
+  \caption[Ejemplo de uso de Shapelab]{Ejemplo de uso de Shapelab~\cite{shapelab-rov2024}}  % Opcional: agrega una leyenda a la imagen
   \label{fig:Shapelab}  % Opcional: añade una etiqueta para referenciar la imagen
 \end{figure}
 
@@ -727,7 +746,7 @@ Inicialmente, se añadió soporte para comandos de voz mediante la integración 
 \begin{figure}[H]  % Puedes quitar la opción [htbp] si no necesitas que esté en esa posición exacta
   \centering
   \includegraphics[width=0.8\linewidth]{img/startrek.png}  % Ajusta el tamaño con width o height
-  \caption{Ejemplo de uso de Star Trek~\cite{star-trek}}  % Opcional: agrega una leyenda a la imagen
+  \caption[Ejemplo de uso de voz en Star Trek Bridge Crew]{Ejemplo de uso de voz en Star Trek Bridge Crew~\cite{star-trek}}  % Opcional: agrega una leyenda a la imagen
   \label{fig:startrek}  % Opcional: añade una etiqueta para referenciar la imagen
 \end{figure}
 
@@ -738,7 +757,7 @@ El resultado en este proyecto busca combinar ambas facetas, creación y control 
 
 \section{Tecnologías auxiliares}
 \subsection{GitHub}
-\textbf{GitHub}\cite{github-docs-git} se ha consolidado como la plataforma líder para el desarrollo colaborativo de software.
+\textbf{GitHub}\footnote{GitHub: \url{https://github.com/}}~\cite{github-docs-git} se ha consolidado como la plataforma líder para el desarrollo colaborativo de software.
 Basándose en el sistema de control de versiones de Git, ofrece un entorno robusto para que desarrolladores de todo el mundo puedan trabajar simultáneamente en proyectos, gestionando los cambios de código de manera eficiente y organizada.
 
 Su principal función radica en el alojamiento de repositorios, que actúan como almacenes centrales para el código fuente de un proyecto. Git permite rastrear cada modificación realizada en el código a lo largo del tiempo, facilitando la reversión a versiones anteriores, la identificación de la autoría de los cambios y la fusión del trabajo de diferentes colaboradores.
@@ -746,7 +765,7 @@ Las pull requests (solicitudes de extracción) sirven como mecanismo para propon
 
 Gracias a estas funcionalidades se ha ido desarrollando poco a poco el proyecto, del que se está hablando en este documento. Si bien no se explotó toda la funcionalidad que GitHub aporta, ha sido de gran ayuda para la recuperación de versiones anteriores y guardar avances.
 \subsection{Visual Studio Code}
-Visual Studio Code\cite{vscode-docs} es un editor de código fuente con un gran equilibrio entre ligereza y potencia. Se distingue por su rendimiento rápido y su capacidad para manejar proyectos de gran envergadura sin comprometer la fluidez.
+Visual Studio Code\footnote{Visual Studio Code: \scriptsize\url{https://code.visualstudio.com/}}\cite{vscode-docs} es un editor de código fuente con un gran equilibrio entre ligereza y potencia. Se distingue por su rendimiento rápido y su capacidad para manejar proyectos de gran envergadura sin comprometer la fluidez.
 Una de sus características más destacadas es su soporte integrado para una amplia gama de lenguajes de programación, incluyendo JavaScript y Python, entre otros.
 
 Para cada lenguaje, VS Code ofrece funcionalidades específicas como el resaltado de sintaxis, que facilita la lectura del código, además de constar con un sistema de autocompletado inteligente que sugiere código, muestra información sobre funciones y parámetros, y ayuda a prevenir errores.
@@ -755,14 +774,17 @@ La depuración integrada es otra funcionalidad clave, permitiendo a los desarrol
 
 El Marketplace de extensiones ofrece una vasta colección de herramientas. En este proyecto se usaron extensiones como Live Server y Live Preview para visualizar los cambios en tiempo real que se hacen tanto en JavaScript como en el cuerpo del archivo de A-Frame.
 
-\subsection{Gafas Meta Quest3}
-Las gafas de realidad virtual (VR) y realidad mixta (MR) de Meta llamadas Quest3\cite{meta-quest3}.
+\subsection{Gafas Meta Quest 3}
+Las gafas de realidad virtual (VR) y realidad mixta (MR) de Meta llamadas Quest 3\cite{meta-quest3}.
 Ofrecen experiencias inmersivas en VR y la capacidad de superponer elementos virtuales en el mundo real (MR).
-Cuentan con mayor resolución, potencia y nuevas funcionalidades como passthrough a color de alta resolución y seguimiento de manos mejorado.
+
+Cuenta con un potente procesador llamado  Qualcomm Snapdragon XR2 Gen 2.
+Integra dos camaras RGB de 4MP (megapixeles) para un passthrough a color en alta definicion.
+Además, mejora la inmersion visual con una resolucion de pantalla de 2064 x 2208 píxeles por ojo, mostrando una imagen mas nitida. 
 \begin{figure}[H]  % Puedes quitar la opción [htbp] si no necesitas que esté en esa posición exacta
   \centering
   \includegraphics[width=0.8\linewidth]{img/Quest3.png}  % Ajusta el tamaño con width o height
-  \caption{Gafas Meta Quest3}  % Opcional: agrega una leyenda a la imagen
+  \caption{Gafas Meta Quest 3}  % Opcional: agrega una leyenda a la imagen
   \label{fig:Quest3}  % Opcional: añade una etiqueta para referenciar la imagen
 \end{figure}
 Se utilizaron para hacer las pruebas de funcionamiento de la aplicación en los navegadores de Meta, pero contaba con ligeros problemas de compatibilidad para el uso de APIs que se usan en navegadores normales.
@@ -775,11 +797,12 @@ Es usado para el desarrollo de la memoria del trabajo de fin de grado. Se tomó 
 \chapter{Desarrollo del proyecto}
 \label{chap:Desarrollo}
 
-El desarrollo del proyecto se ha inspirado conceptualmente en las metodologías ágiles. Para ser más preciso, con el marco \textbf{Scrum}\footnote{Guía de Scrum oficial ~\cite{SchwaberSutherland2020}.}, para su explicación y seguimiento del progreso.
+El desarrollo del proyecto se ha inspirado conceptualmente en las metodologías ágiles. 
+Para su descripción se han utilizado algunos conceptos de \textbf{Scrum}\footnote{Guía de Scrum oficial ~\cite{SchwaberSutherland2020}.}, para su explicación y seguimiento del progreso.
 
 Aunque para el desarrollo de este proyecto no se contó con un equipo de trabajo amplio, ni sea un proyecto real,
 la responsabilidad de Scrum Master fue asumida por el tutor del TFG, quien se encargó de definir los requisitos y evaluar los incrementos iterativos.
-El Equipo de Desarrollo ejecutó las tareas técnicas, haciendo avanzar el proyecto de forma incremental a través de una serie de sprints.
+El equipo de desarrollo ejecutó las tareas técnicas, haciendo avanzar el proyecto de forma incremental a través de una serie de sprints.
 
 Esto facilitó la gestión del proyecto mediante ciclos iterativos conocidos como sprints.
 La progresión a un sprint posterior dependía del logro exitoso de los objetivos del sprint precedente.
@@ -830,7 +853,7 @@ Estructura mínima de cada sprint:
 \item Mejora de la estética y colocación de objetos.
   \end{itemize}
 
- \item \textbf{Sprint 5: Integración Quest3 (1 semana)}
+ \item \textbf{Sprint 5: Integración Quest 3 (1 semana)}
   \begin{itemize}
    \item Explorar la posibilidad de integración del proyecto con dispositivos VR/AR, específicamente las gafas Quest 3.
   \item Creación de servidor propio para peticiones de transcripción.
@@ -841,17 +864,15 @@ Estructura mínima de cada sprint:
    \item Mejora de la estética y colocación de objetos.
  \item Que los elementos que aparezcan en la escena y proporcionen información al usuario sean fáciles de ver.
  \item Maquetado final de la demo para escritorio.
- \item Maquetado y unión del back-end y front-end para demo con gafas Quest3.
+ \item Maquetado y unión del back-end y front-end para demo con gafas Quest 3.
  \end{itemize}
 \end{itemize}
 
-
-\cleardoublepage
 \section{Sprint 1}
 \label{sec:sprint1}
 
-El desarrollo de este primer Sprint tuvo una duración de 3 semanas, fue la primera toma de contacto con el servicio de reconocimiento de voz y del uso complejo en A-Frame.
-Además, contamos con diferentes programas que se fueron desarrollando en el transcurso de este sprint. Estos programas se irán explicando a continuación.
+Con este sprint, se tuvo la primera toma de contacto con el servicio de reconocimiento de voz y del uso complejo en A-Frame.
+Además, se contó con diferentes programas que se fueron desarrollando en el transcurso de este sprint. Estos programas se irán explicando a continuación.
 \subsection{Objetivos}
  \begin{itemize}
   \item Familiarización con las tecnologías de reconocimiento de voz y seleccionar una para uso en el navegador.
@@ -873,7 +894,7 @@ Este programa se llevó a cabo mediante Python, grabando la voz mediante el micr
 
 \textbf{2. Servidor híbrido Node.js + Python}
 
-Para el segundo caso, usamos un servidor propio creado a base de Node.js que se comunicaba con el mismo script de Python en tiempo real para realizar las transcripciones del mismo modo que en el caso anterior.
+Para el segundo caso, se usó un servidor propio creado a base de Node.js que se comunicaba con el mismo script de Python en tiempo real para realizar las transcripciones del mismo modo que en el caso anterior.
 Este caso se desarrolló para poder implementar la transcripción de voz en el navegador y desarrollar la idea principal del proyecto.
 La transcripción obtenida se transmitiría al cliente web a través de WebSockets.
 
@@ -896,7 +917,7 @@ Si se detectan palabras como crear, editar u otro texto, el fondo cambia de colo
 \begin{figure}[H]  % Puedes quitar la opción [htbp] si no necesitas que esté en esa posición exacta
   \centering
   \includegraphics[width=0.5\linewidth]{img/Demo1_v2.png}  % Ajusta el tamaño con width o height
-  \caption{Funcionamiento de la segunda demo para A-Frame}  % Opcional: agrega una leyenda a la imagen
+  \caption{Funcionamiento de la demo de reconocimiento de voz en A-Frame}  % Opcional: agrega una leyenda a la imagen
   \label{fig:Demo1V2}  % Opcional: añade una etiqueta para referenciar la imagen
 \end{figure}  
 
@@ -905,8 +926,8 @@ Si se detectan palabras como crear, editar u otro texto, el fondo cambia de colo
 \begin{itemize}
   \setlength\parskip{0pt}    % Espacio entre párrafos
  \item Para conseguir el objetivo de elección de tecnología de reconocimiento de voz se ha optado por la opción de Web Speech API ya que fue la más eficiente y directa para pruebas en escritorio.
- También tuvo varias cosas negativas, la principal fue que en el uso de la detección y transcripción de voz en gafas de VR/AR, como son las Quest3, no fuesen soportadas en el navegador de Meta.
- No obstante, esta incompatibilidad de Web Speech API con navegadores de gafas como la Quest3 llevó a plantear dos líneas de trabajo: una demo basada en navegador para escritorio, y una segunda demo soportada por back-end para su funcionamiento en gafas de realidad mixta, empleando Node.js y alguna API de reconocimiento de voz en el servidor.
+ También tuvo varias cosas negativas, la principal fue que en el uso de la detección y transcripción de voz en gafas de VR/AR, como son las Quest 3, no fuesen soportadas en el navegador de Meta.
+ No obstante, esta incompatibilidad de Web Speech API con navegadores de gafas como la Quest 3 llevó a plantear dos líneas de trabajo: una demo basada en navegador para escritorio, y una segunda demo soportada por back-end para su funcionamiento en gafas de realidad mixta, empleando Node.js y alguna API de reconocimiento de voz en el servidor.
  \item Para completar los objetivos de familiarización con A-Frame y el desarrollo de una demo funcional se creó la
 Demo de Reconocimiento de Voz en A-Frame y una vez conocidos los elementos a interactuar, el añadir un factor como el reconocimiento de voz fue un desafío de grado medio. Se encontró que la transcripción podía ser usada directamente para el cambio de valor dentro del \texttt{<a-text>}.
 \end{itemize}
@@ -914,7 +935,7 @@ Demo de Reconocimiento de Voz en A-Frame y una vez conocidos los elementos a int
 
 \section{Sprint 2}
 \label{sec:sprint2}
-Este sprint tuvo una duración de 2 semanas, además contiene demos interactivas en las que se combina A-Frame con reconocimiento de voz para crear objetos 3D dentro de una escena usando comandos hablados.
+Este sprint contiene demos interactivas en las que se combina A-Frame con reconocimiento de voz para crear objetos 3D dentro de una escena usando comandos hablados.
 Cada demo mejora la anterior, especialmente en el reconocimiento y manejo de coordenadas y números, permitiendo finalmente la creación precisa de objetos con posición y tamaño definidos por voz.
 Además del incremento y mejoras en los componentes de A-Frame.
 
@@ -933,10 +954,10 @@ Además del incremento y mejoras en los componentes de A-Frame.
 
 En esta demo se creó un componente llamado \texttt{\textbf{input-text}} que, aparte de transcribir el audio, también detectará comandos de voz.
 Estos comandos serán procesados de la transcripción, como se puede ver en la Figura~\ref{fig:componente1}.
-Trabajamos principalmente con el comando 'crear [objeto]', este permite la generación de cubos, solicitando a continuación la 'posición' y el 'tamaño' del objeto.
+Se trabajó principalmente con el comando 'crear [objeto]', este permite la generación de cubos, solicitando a continuación la 'posición' y el 'tamaño' del objeto.
 
 Sin embargo, presenta ciertas limitaciones, una de ellas es la fiabilidad en el reconocimiento numérico (valores numéricos que la transcripción decide automáticamente poner como letras e incapacidad para interpretar valores negativos en las transcripciones).
-Otra de las limitaciones que encontramos es la captura de coordenadas como un bloque único.
+Otra de las limitaciones que se encontraron es la captura de coordenadas como un bloque único.
   \begin{figure}[H]  % Puedes quitar la opción [htbp] si no necesitas que esté en esa posición exacta
     \centering
     \includegraphics[width=0.8\linewidth]{img/componentes1.png}  % Ajusta el tamaño con width o height
@@ -965,12 +986,12 @@ Se puede observar su uso en la Figura~\ref{fig:comandDemo4} en donde aparecen lo
 
 \textbf{sky-manager:} Se encarga de gestionar el color del fondo de la escena (\texttt{<a-sky>}) en respuesta a eventos personalizados emitidos a nivel de la escena provenientes del \texttt{command-handler}.
 
-Añadido a estos componentes, decidimos separar el código de JavaScript y el HTML, para organizar así mejor los archivos y la estructuración del proyecto.
+Añadido a estos componentes, se dedidió separar el código de JavaScript y el HTML, para organizar así mejor los archivos y la estructuración del proyecto.
 También se han solucionado los problemas con los números creando un manejador de números.
 \begin{figure}[H]  % Puedes quitar la opción [htbp] si no necesitas que esté en esa posición exacta
   \centering
   \includegraphics[width=0.7\linewidth]{img/comandoDemo4.png}  % Ajusta el tamaño con width o height
-  \caption{Funcionamiento del comando básico Demo 4}  % Opcional: agrega una leyenda a la imagen
+  \caption{Funcionamiento del comando de creacion de objetos básico}  % Opcional: agrega una leyenda a la imagen
   \label{fig:comandDemo4}  % Opcional: añade una etiqueta para referenciar la imagen
 \end{figure}
 
@@ -995,7 +1016,7 @@ También se han solucionado los problemas con los números creando un manejador 
 
 \section{Sprint 3}
 \label{sec:sprint3}
-Este sprint tuvo una duración de 2 semanas, en donde se desarrolló las capacidades del proyecto, añadiendo más modificadores, creando componentes e incluso mejorando la división del código.
+En este sprint se desarrollaron las capacidades del proyecto, añadiendo más modificadores, creando componentes e incluso mejorando la división del código.
 Durante el desarrollo de este sprint se crearon componentes para el accionar del proyecto.
 \subsection{Objetivos}
 \begin{itemize}
@@ -1049,7 +1070,8 @@ Este cambio envía un mensaje al usuario que se utiliza para guiarlo a través d
 
 \section{Sprint 4}
 \label{sec:sprint4}
-Este Sprint tuvo una duración de 2 semanas, en donde se dieron la mayoría de los avances en la creación de componentes, como se puede ver en la Figura~\ref{fig:componente4}.
+En este sprint se dieron la mayoría de los avances en la creación de componentes, como se puede ver en la Figura~\ref{fig:componente4}.
+Pudiendo así tener una estructura de componentes variados, con su respectiva funcionalidad, que se mantendrían hasta el final del desarrollo.
 \subsection{Objetivos}
 \begin{itemize}
 \setlength\itemsep{0.3em}  % Espacio entre ítems
@@ -1068,7 +1090,7 @@ Este Sprint tuvo una duración de 2 semanas, en donde se dieron la mayoría de l
   \caption{Flujo de creación de componentes avanzados}  % Opcional: agrega una leyenda a la imagen
   \label{fig:componente4}  % Opcional: añade una etiqueta para referenciar la imagen
 \end{figure}
-Esta demo es la más completa de todas; agrupamos la funcionalidad presentada anteriormente y añadiendo unas mejoras de las que hablaremos a continuación.
+Esta demo es la más completa de todas; se agrupó la funcionalidad presentada anteriormente y añadiendo unas mejoras de las que se hablará a continuación.
 Primero se añadió la lógica para crear diferentes tipos de objetos (cubo, esfera, plano, luz, y assets como contenedor y radio) al recibir comandos de voz.
 Se agregaron nuevos componentes con funcionalidades diversas:
 \begin{itemize}
@@ -1116,7 +1138,12 @@ Se añadieron paneles nuevos para añadir información extra que puede ser útil
 
 \section{Sprint 5}
 \label{sec:sprint5}
-La duración de este sprint fue de una semana. Durante este periodo se identificaron varios fallos críticos que llevaron a una reestructuración significativa del flujo de trabajo inicial.
+
+Este sprint se enfocó en la funcionalidad de la aplicación en gafas tipo Meta Quest 3. 
+Para lograrlo, se abordaron dos aspectos clave:
+primero, al ver cómo se puede integrar en navegadores de meta, esto llevó a una restructuración de código.
+Por otro lado, cuando se observó que la API con la que se había trabajado hasta el momento no funcionaba en este tipo de navegadores, se decidió optar por la creación de un servidor privado para el reconocimiento de voz.
+
 \subsection{Objetivos}
 \begin{itemize}
   \item Explorar la posibilidad de integración del proyecto con dispositivos VR/AR, específicamente las gafas Quest 3.
@@ -1124,9 +1151,9 @@ La duración de este sprint fue de una semana. Durante este periodo se identific
 \end{itemize}
 \subsection{Tareas Realizadas}
 
-Durante este proceso se encontró el fallo más grande. En primer lugar, se quería realizar este proyecto íntegro en gafas VR/AR Quest3.
-Pero la API de reconocimiento de voz integrada en navegadores no fue soportada por el navegador de Meta, entonces se volvió a replantear todo lo trabajado con anterioridad.
-Probamos con tecnologías diferentes de reconocimiento de voz, refactorizamos el componente que se encargaba de reconocimiento de voz dentro de nuestro proyecto de A-Frame.
+En primer lugar, se quería realizar este proyecto íntegro en gafas VR/AR Quest 3.
+Pero la API de reconocimiento de voz integrada en navegadores no fue soportada por el navegador de Meta, entonces se volvió a replantear el flujo para obtención de la transcripción por voz.
+Se probó con tecnologías diferentes de reconocimiento de voz, refactorizando el componente que se encargaba de reconocimiento de voz dentro de este proyecto de A-Frame.
 Pero no se encontró ninguna solución, ya que no soportaba la detección del audio.
 
 Por ello, se creó un servidor privado que fuese capaz de manejar los audios obtenidos del cliente y luego procesarlos y mandarlos a una API de Speech-to-text llamada Assembly AI, que devolverá la transcripción al servidor y este finalmente al cliente por medio del servidor.
@@ -1138,10 +1165,10 @@ La implementación de un servidor HTTPS funcional presentó un nuevo reto, ya qu
 
 \textbf{-Configurar un servidor HTTPS}
 
-\textbf{-Acceso desde otros dispositivos en red local:} Ahora la conexión deberá hacerse al servidor, entonces en la URL deberemos apuntar a la IP del servidor que esté en la misma conexión de internet y con el puerto correspondiente (ej. \texttt{https://<<IP>>:8080/}).
+\textbf{-Acceso desde otros dispositivos en red local:} Ahora la conexión deberá hacerse al servidor, entonces la URL deberá apuntar a la IP del servidor que esté en la misma conexión de internet y con el puerto correspondiente (ej. \texttt{https://<<IP>>:8080/}).
 
 \subsection{Resultados}
-Tras la creación de certificados y configuraciones, se pudo conectar el servidor con las gafas de VR/AR Quest3. El problema era la detección del micrófono, que solo se hacía si el servidor tenía los permisos para HTTPS.
+Tras la creación de certificados y configuraciones, se pudo conectar el servidor con las gafas de VR/AR Quest 3. El problema era la detección del micrófono, que solo se hacía si el servidor tenía los permisos para HTTPS.
 
 Como resultado, se consiguió la interacción completa esperada: el cliente envía el audio al servidor, este lo reenvía a Assembly AI para su transcripción, y finalmente el texto transcrito es devuelto al cliente para su visualización.
 
@@ -1156,13 +1183,13 @@ También hay que recalcar que para el uso de algunos complementos nos tocó usar
 \end{itemize}
 
  
-
+\clearpage
 \section{Sprint 6}
 \label{sec:sprint6}
 
-Este sprint duró 3 semanas, en donde se llevaron a cabo los últimos ajustes para la implementación final tanto en escritorio como para gafas VR/AR Quest3.
+En este sprint se llevaron a cabo los últimos ajustes para la implementación final tanto en escritorio como para gafas VR/AR Quest 3.
 
-Vamos a tratar de mejorar la usabilidad; uno de los problemas que se encontró es que los carteles o elementos que debía ver el usuario quedaban en posiciones en las que el usuario no podía ver, por lo que se tratará de arreglar este problema.
+Se tratará de mejorar la usabilidad; uno de los problemas que se encontró es que los carteles o elementos que debía ver el usuario quedaban en posiciones en las que el usuario no podía ver, por lo que se tratará de arreglar este problema.
 También otro problema presentado es la limitación que tienen los \texttt{<a-text>} para mostrar información.
 \subsection{Objetivos}
 \begin{itemize}
@@ -1171,7 +1198,7 @@ También otro problema presentado es la limitación que tienen los \texttt{<a-te
  \item Mejora de la estética y colocación de objetos.
  \item Que los elementos que aparezcan en la escena y proporcionen información al usuario sean fáciles de ver.
  \item Maquetado final de la demo para escritorio.
- \item Maquetado y unión del back-end y front-end para demo con gafas Quest3.
+ \item Maquetado y unión del back-end y front-end para demo con gafas Quest 3.
 \end{itemize}
 \subsection{Tareas Realizadas}
 
@@ -1197,15 +1224,19 @@ Por otro lado, también se agregaron componentes para nuevos comandos tales como
     \caption{Componentes finales agregados}  % Opcional: agrega una leyenda a la imagen
     \label{fig:componentes5}  % Opcional: añade una etiqueta para referenciar la imagen
   \end{figure}
-Finalmente, se hizo la inclusión de las demos para escritorio y gafas Quest3, donde el cambio más significativo entre ellas es el componente \texttt{\textbf{input-text}}, el cual en la versión de escritorio usa WebSpeechAPI y en la versión de AR/VR usamos un servidor conectado a AssemblyAI.
+Finalmente, se hizo la inclusión de las demos para escritorio y gafas Quest 3, donde el cambio más significativo entre ellas es el componente \texttt{\textbf{input-text}}, el cual en la versión de escritorio usa WebSpeechAPI y en la versión de AR/VR se usará un servidor conectado a AssemblyAI.
 \subsection{Resultados}
 \begin{itemize}
+  \setlength\itemsep{0.3em}
+\setlength\parskip{0pt}  
   \item Para cumplir con el objetivo de la mejora de la estética y posicionamiento de los objetos, se trabajaron con componentes externos haciendo que sea más fácil de ver para el usuario.
   \item Para cumplir el objetivo del maquetado final, el desarrollo de componentes reutilizables mejoró la modularidad del sistema, permitiendo construir objetos más complejos con menos código y mayor coherencia visual.
-  \item También se logró una integración efectiva de entrada por voz, adaptada según la demo, lo que permitió mantener una experiencia coherente en ambos entornos; esto sirvió tanto para el maquetado final en escritorio como en gafas tipo Quest3, cumpliendo así esos objetivos.
+  \item También se logró una integración efectiva de entrada por voz, adaptada según la demo, lo que permitió mantener una experiencia coherente en ambos entornos; esto sirvió tanto para el maquetado final en escritorio como en gafas tipo Quest 3, cumpliendo así esos objetivos.
 \end{itemize}
 \subsection{Lecciones aprendidas}
 \begin{itemize}
+  \setlength\itemsep{0.3em}
+\setlength\parskip{0pt}  
   \item Se valoró el uso de herramientas externas y componentes, que ampliaron las posibilidades de diseño y funcionalidad sin comprometer el rendimiento.
   \item El componente \texttt{look-at} resolvió perfectamente el problema de la ubicación de objetos de información.
   \item El componente \texttt{htmlembed} permitió añadir información más variada a la escena, pero no se logró conseguir el dinamismo esperado durante el uso de la aplicación.
@@ -1218,27 +1249,21 @@ Finalmente, se hizo la inclusión de las demos para escritorio y gafas Quest3, d
 \label{chap:resultados}
 
 El resultado de este proyecto fue la creación de un conjunto de componentes modulares que sirven como base para el desarrollo de diversas aplicaciones interactivas.
-Para demostrar la funcionalidad y versatilidad de estos componentes, se ha creado una aplicación que tiene dos modos de empleo, una para navegador en escritorio y otra para navegador de gafas tipo Quest3 descrita a continuación.
+Para demostrar la funcionalidad y versatilidad de estos componentes, se ha creado una aplicación que tiene dos modos de empleo, una para navegador en escritorio y otra para navegador de gafas tipo Quest 3 descrita a continuación.
 
-La arquitectura de estos componentes es reutilizable, lo que facilita la construcción de diferentes aplicaciones personalizadas. Por ejemplo:
-\begin{itemize}
-  \item Una aplicación centrada exclusivamente en la creación de objetos 3D, sin funcionalidades de edición.
-  \item Una herramienta especializada en la edición de escenas 3D preexistentes.
-  \item Una aplicación enfocada en la transcripción de voz y escritura textual dentro de entornos 3D.
-\end{itemize}
-Incluso la aplicación actual, diseñada para el control por voz, podría ser fácilmente adaptada para operar mediante entrada de texto tradicional en lugar de reconocimiento de voz.
-\clearpage
-\section{Aplicación desarollada}
+\section{Aplicación desarrollada}
 
 Como resultado principal de este trabajo de fin de grado, se ha construido una aplicación
 que ha sido diseñada para facilitar la creación y manipulación de objetos geométricos primarios mediante el uso de comandos de voz.
 Incluye funciones como la generación de figuras primitivas geométricas, modificación paramétrica y gestión de objetos ya creados, y la posibilidad de guardar y cargar una escena reciente, todo ello usando comandos de voz.
 
-La aplicación cuenta con dos versiones: una para escritorio basada en el reconocimiento de voz que ofrece Web Speech API, y otra versión para navegadores de gafas tipo Quest3 que no aceptan la API de reconocimiento de voz mencionada, sino que se ha creado un servidor privado que hace el mismo procedimiento pero con otra API de reconocimiento de voz llamada AssemblyAI.
+La aplicación cuenta con dos versiones: una para escritorio basada en el reconocimiento de voz que ofrece Web Speech API, y otra versión para navegadores de gafas tipo Quest 3 que no aceptan la API de reconocimiento de voz mencionada, sino que se ha creado un servidor privado que hace el mismo procedimiento pero con otra API de reconocimiento de voz llamada AssemblyAI.
 La diferencia fundamental reside en la API de reconocimiento de voz empleada en cada implementación; las demás funcionalidades y componentes permanecen idénticos.
 
 \textbf{Descripción de la aplicación:}
 \begin{enumerate}
+  \setlength\itemsep{0.3em}
+\setlength\parskip{0pt}  
  \item Se explicará el entorno de ejecución de la aplicación. 
  \item Posteriormente, se describirá la escena 3D que se presenta al usuario al ejecutarla. 
  \item Luego, se detallarán los comandos disponibles y su modo de utilización.
@@ -1250,19 +1275,18 @@ La diferencia fundamental reside en la API de reconocimiento de voz empleada en 
 La aplicación funciona en navegadores; estos deberán soportar las APIs de reconocimiento de voz (Web Speech API o AssemblyAI) implementadas en este sistema de componentes.
 Se necesita además que pueda manejar A-Frame y las tecnologías sobre las que se construye.
 
-A continuación se describirá lo que puede ver el usuario cuando se ejecute la aplicación en un navegador.
-\clearpage
 \subsection{Objetos en escena}
-  \begin{figure}[H]  % Puedes quitar la opción [htbp] si no necesitas que esté en esa posición exacta
+A continuación se describirán los objetos que el usuario puede ver en la escena y el porqué de su implementación.
+\begin{figure}[H]  % Puedes quitar la opción [htbp] si no necesitas que esté en esa posición exacta
     \centering
     \includegraphics[width=0.7\linewidth]{img/objScena.png}  % Ajusta el tamaño con width o height
     \caption{Objetos en escena que puede ver el usuario.}  % Opcional: agrega una leyenda a la imagen
     \label{fig:obj-Scene}  % Opcional: añade una etiqueta para referenciar la imagen
   \end{figure}
 
-
-A continuación se describirán los objetos que el usuario puede ver en la escena y el porqué de su implementación.
 \begin{itemize}
+  \setlength\itemsep{0.3em}
+\setlength\parskip{0pt}  
   \item Se ha creado un recuadro 3D que permite iniciar o detener el reconocimiento de voz, para implementar la funcionalidad de interacción con voz. Dicho recuadro está situado en la parte inferior de la cámara del usuario, como se ve en la Figura~\ref{fig:obj-Scene}.
   \item Se ha creado un panel de transcripción situado a la izquierda en la Figura~\ref{fig:obj-Scene}, ya que en algunos casos es necesario ver las transcripciones que se han realizado durante la conversación con la aplicación, cumpliendo así con la función de retroalimentación.
   \item Se creó el panel de información situado a la derecha en la Figura~\ref{fig:obj-Scene}, para poder contextualizar la situación de la escena, donde su contenido se adapta al modo de interacción en el que se encuentre (estado según el comando seleccionado).
@@ -1275,6 +1299,8 @@ La escena permite interactuar usando los siguientes comandos de voz.
 Una vez que haya iniciado la grabación de voz, dicho inicio se realiza haciendo clic en la caja de entrada de voz antes de decir un comando.
 Se tiene que decir exactamente las palabras que se mencionan a continuación: 
 \begin{itemize}
+  \setlength\itemsep{0.3em}
+\setlength\parskip{0pt}  
   \item \textbf{CREAR:} Activa el modo de creación. El panel de información mostrará los tipos de objetos que puedes crear (cubo, esfera, plano, cilindro, luz, assets).
   \item \textbf{EDITAR:} Activa el modo de edición. El panel de información te pedirá el ID del objeto que deseas modificar.
   \item \textbf{ELIMINAR:} Activa el modo de eliminación. El panel de información te pedirá el ID del objeto a eliminar y luego te pedirá confirmación (Sí/No).
@@ -1298,7 +1324,7 @@ Se tiene que decir exactamente las palabras que se mencionan a continuación:
   Para finalizar las modificaciones y salir de este modo, el usuario debe decir 'cambio'.
  \begin{figure}[H] % Puedes quitar la opción [htbp] si no necesitas que esté en esa posición exacta
   \centering
-  \includegraphics[width=0.5\linewidth]{img/crearContenedor.png} % Ajusta el tamaño con width o height
+  \includegraphics[width=0.7\linewidth]{img/crearContenedor.png} % Ajusta el tamaño con width o height
   \caption[Creación de objetos, ejemplo 'contenedor']{En la imagen se puede ver la creación de un asset llamado 'contenedor' junto a dos objetos previamente creados.} % Opcional: agrega una leyenda a la imagen
   \label{fig:crearComando} % Opcional: añade una etiqueta para referenciar la imagen
  \end{figure}
@@ -1312,7 +1338,7 @@ A partir de ese momento, el panel de información te guiará con las instruccion
 Cuando hayas finalizado las modificaciones deseadas, se deberá decir 'cambio' para abandonar el modo de edición.
   \begin{figure}[H]  % Puedes quitar la opción [htbp] si no necesitas que esté en esa posición exacta
     \centering
-    \includegraphics[width=0.5\linewidth]{img/editarPEPE.png}  % Ajusta el tamaño con width o height
+    \includegraphics[width=0.7\linewidth]{img/editarPEPE.png}  % Ajusta el tamaño con width o height
     \caption[Escena de edición con objeto resaltado]{Funcionamiento al editar objetos con ID, donde el objeto a editar está marcado y la interfaz está esperando el siguiente paso para modificar algún parámetro del objeto, se puede observar como el marco de los paneles cambio de color.}  % Opcional: agrega una leyenda a la imagen
     \label{fig:editarObj2}  % Opcional: añade una etiqueta para referenciar la imagen
   \end{figure}
@@ -1327,20 +1353,17 @@ Para proceder con la eliminación, diga 'sí'; para cancelar, diga 'no'.
 Finalmente, tras confirmar o cancelar la operación, diga 'salir' o 'atrás' para regresar al estado de funcionamiento normal de la aplicación.
   \begin{figure}[H]  % Puedes quitar la opción [htbp] si no necesitas que esté en esa posición exacta
     \centering
-    \includegraphics[width=0.5\linewidth]{img/eliminarPACO.png}  % Ajusta el tamaño con width o height
-    \caption[Escena de eliminación del objeto PACO]{Se muestra en la escena el objeto a eliminar, donde la interfaz está esperando la confirmación de la eliminación del objeto 'PACO', al lado del objeto 'PEPE', se puede observar como el marco de los paneles cambio de color.}  % Opcional: agrega una leyenda a la imagen
+    \includegraphics[width=0.7\linewidth]{img/eliminarPACO.png}  % Ajusta el tamaño con width o height
+    \caption[Escena de eliminación del objeto paco]{Se muestra en la escena el objeto a eliminar, donde la interfaz está esperando la confirmación de la eliminación del objeto 'paco', al lado del objeto 'pepe', se puede observar como el marco de los paneles cambio de color.}  % Opcional: agrega una leyenda a la imagen
     \label{fig:eliminarObj2}  % Opcional: añade una etiqueta para referenciar la imagen
   \end{figure}
-
 \item Para guardar la escena actual, se deberá activar el reconocimiento de voz, si no lo está. Posteriormente, pronuncia el comando '\textbf{GUARDAR}'. Una vez ejecutado, el sistema proporcionará una confirmación visual indicando que la escena ha sido guardada satisfactoriamente.
-
 \item Para cargar la escena actual, se deberá activar el reconocimiento de voz, si no lo está. Posteriormente, pronuncia el comando '\textbf{CARGAR}'. Una vez ejecutado, el sistema proporcionará una confirmación visual indicando que la escena ha sido cargada satisfactoriamente.
-
 \item Para solicitar ayuda o ver los comandos disponibles, se deberá activar el reconocimiento de voz, si no lo está. Luego, pronuncia uno de los siguientes comandos: '\textbf{AYUDA}', '\textbf{HELP}' o '\textbf{COMANDOS}'. El panel de información mostrará entonces la lista de comandos principales que puedes utilizar, como se ve en la Figura~\ref{fig:ayuda}.
 Para salir de un modo específico (como '\textbf{CREAR}', '\textbf{EDITAR}' o '\textbf{ELIMINAR}') en cualquier momento, se deberá hacer clic en la caja de entrada de voz y decir '\textbf{SALIR}', '\textbf{ATRÁS}' o '\textbf{CAMBIO}'.
   \begin{figure}[H]  % Puedes quitar la opción [htbp] si no necesitas que esté en esa posición exacta
     \centering
-    \includegraphics[width=0.5\linewidth]{img/ayudaPanel.png}  % Ajusta el tamaño con width o height
+    \includegraphics[width=0.7\linewidth]{img/ayudaPanel.png}  % Ajusta el tamaño con width o height
     \caption[Escena de ayuda con los comandos posibles]{Se muestra la escena donde el panel de información contiene los diferentes comandos que se pueden usar, además de distinguirse el estado de la escena con los bordes de color rosa.}  % Opcional: agrega una leyenda a la imagen
     \label{fig:ayuda}  % Opcional: añade una etiqueta para referenciar la imagen
   \end{figure}
@@ -1350,13 +1373,13 @@ Para salir de un modo específico (como '\textbf{CREAR}', '\textbf{EDITAR}' o '\
 La funcionalidad de guardar y cargar escenas utiliza la memoria local del navegador, por lo que las escenas no se conservarán si se borra la caché o se utiliza otro navegador/dispositivo.
 La precisión del reconocimiento de voz puede variar dependiendo del micrófono, el acento y el ruido ambiental.
 El panel interactivo inicial (\texttt{htmlembed}) proporciona una guía visual adicional dentro de la escena. Se puede cerrarlo haciendo clic en el botón 'Close' al final de las diapositivas, como se ve en la Figura\ref{fig:panelHtmlembed}.
-  \begin{figure}[hbtp]  % Puedes quitar la opción [htbp] si no necesitas que esté en esa posición exacta
+  \begin{figure}[H]  % Puedes quitar la opción [htbp] si no necesitas que esté en esa posición exacta
     \centering
     \includegraphics[width=0.5\linewidth]{img/cerrarPanel.png}  % Ajusta el tamaño con width o height
     \caption[Como cerrar panel de ayuda al usuario]{Se visualiza el panel creado con htmlembed donde se muestra cómo cerrarlo al final de las diapositivas de ayuda al usuario.}  % Opcional: agrega una leyenda a la imagen
     \label{fig:panelHtmlembed}  % Opcional: añade una etiqueta para referenciar la imagen
   \end{figure}
-\section{Descripción Técnica}
+\section{Descripción de la implementación}
 
 A continuación se describe la arquitectura y el funcionamiento interno del conjunto de componentes, diseñado para extender A-Frame y permitir la interacción por voz en un entorno VR.
 Dichos componentes están implementados en el fichero componente.js\footnote{fichero alojado en GitHub:\scriptsize\url{https://github.com/R4CC00N/SpeechRecognition_in_Browser/blob/main/DemoEscritorio/componente.js}}
@@ -1365,16 +1388,20 @@ Esta sección detalla los aspectos técnicos clave del código para facilitar su
 
 \subsection{Arquitectura General}
 
-La aplicación sigue un patrón basado en componentes de A-Frame. Cada componente encapsula una funcionalidad específica (manejo de entrada, creación de UI, gestión de comandos, modificación de objetos, etc.). La comunicación entre componentes se realiza principalmente a través de eventos de A-Frame emitidos en la escena (\texttt{a-scene}) o en elementos específicos (\texttt{a-entity}).
+La aplicación sigue un patrón basado en componentes de A-Frame. Cada componente encapsula una funcionalidad específica (manejo de entrada, creación de UI, gestión de comandos, modificación de objetos, etc.). 
+La comunicación entre componentes se realiza principalmente a través de eventos de A-Frame emitidos en la escena (\texttt{a-scene}) o en elementos específicos (\texttt{a-entity}).
+Dado que los componentes creados son componentes de A-Frame normales, interaccionan perfectamente con otros componentes de A-Frame en una escena, lo que facilita la creación de entornos más completos y complejos.
 
 \subsection{Componentes Principales}
 \begin{itemize}
+  \setlength\itemsep{0.3em}
+\setlength\parskip{0pt}  
   \item \textbf{input-text}:
   Este componente utiliza \textbf{Web Speech API} como dependencia principal.
 Su funcionalidad consiste en capturar audio del micrófono, realizar transcripción en tiempo real, aplicar normalizaciones (quitar acentos, convertir números de texto a dígitos) y emitir un evento \texttt{\textbf{transcription}} con el texto limpio.
 El componente responde a un evento clic en el propio elemento para iniciar/detener la grabación.
 
-Existe una versión para gafas tipo Quest3 que usa una conexión a un servidor privado, en el que se realiza el mismo procedimiento que Web Speech API pero con otra aplicación de transcripción de voz llamada AssemblyAI.
+Existe una versión para gafas tipo Quest 3 que usa una conexión a un servidor privado, en el que se realiza el mismo procedimiento que Web Speech API pero con otra aplicación de transcripción de voz llamada AssemblyAI.
   \item \textbf{transcription-display}:
 Este componente depende de un elemento de entrada especificado por el selector \texttt{input}.
 Su función principal es mostrar las transcripciones de voz recibidas de este elemento de entrada dentro de la escena de A-Frame.
@@ -1382,15 +1409,15 @@ Su función principal es mostrar las transcripciones de voz recibidas de este el
 Escucha los eventos \texttt{\textbf{transcription}} emitidos por el elemento de entrada y toma el texto de la transcripción (\texttt{event.detail.transcription}). Luego, busca un elemento \texttt{\textbf{<a-text>}} con el ID \textbf{'transcriptionText'} dentro de sí mismo y actualiza su atributo \texttt{value} con la transcripción recibida.
   \item \textbf{command-handler:}
 Este componente depende del componente \texttt{\textbf{input-text}} especificado por el selector \texttt{input}, este componente necesita un ID (create) que será usado de \texttt{input} en otro componente (\texttt{object-creator}).
-La principal función es actuar como controlador central de la lógica de la aplicación.
+Su función es actuar como controlador de eventos para componentes como el \texttt{object-creator} y el \texttt{sky-manager}.
 
-Escucha los eventos \texttt{\textbf{transcription}} y, basándose en palabras clave, determina el modo de operación y emite eventos de A-Frame correspondientes en el elemento \texttt{\textbf{<a-scene>}} como los mostrados en el Cuadro\ref{tabla:comandos} a continuacion:
+Escucha los eventos \texttt{\textbf{transcription}} y, basándose en palabras clave, determina el modo de operación y emite eventos de A-Frame correspondientes en el elemento \texttt{\textbf{<a-scene>}} como los mostrados en el Cuadro\ref{tabla:comandos} a continuación:
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|}
 \hline
-\textbf{Acción} & \textbf{Comando Emitido} \\
+\textbf{Acción detectada} & \textbf{Comando Emitido} \\
 \hline
 Crear          & enter-create-mode, start-object-creation \\
 Editar         & edit-mode \\
@@ -1408,7 +1435,10 @@ Salir          & exit-create-mode \\
 En resumen, este componente interpreta los comandos hablados y los traduce en acciones concretas dentro de la escena de A-Frame.
   \item \textbf{object-creator:}
 Este componente escucha el evento \textbf{start-object-creation} emitido por el \textbf{command-handler} cuya ID es un parámetro de entrada para este componente ('create').
-Al recibir el evento, se crean dinámicamente entidades primitivas o modelos GLTF en A-Frame basadas en el \texttt{type} especificado en el detalle del evento. Asigna un ID predeterminado, establece atributos iniciales y añade la nueva entidad al contenedor \texttt{\textbf{'objsCreated'}}.
+Al recibir el evento, se crean dinámicamente entidades primitivas o modelos GLTF en A-Frame basadas en el \texttt{type} especificado en el detalle del evento. 
+Asigna un ID predeterminado al objeto recién creado, el cual aparecerá en la parte superior y se podrá ser modificado.
+Este ID será importante, ya que otros componentes lo usarán para interactuar con el objeto.
+Adicionalmente, durante la creación se establecen atributos iniciales y se añade la nueva entidad al contenedor \texttt{\textbf{'objsCreated'}}.
 También asocia una variable de estado global (\texttt{modifyingBox, modifyingSphere}, etc.) a \texttt{true} para indicar que se ha iniciado la modificación.
   \item \textbf{dynamic-modifier:}
 Este componente depende del componente \texttt{\textbf{input-text}} especificado por el selector \texttt{input}.
@@ -1420,28 +1450,35 @@ Por último, emite eventos en el elemento \texttt{\textbf{<a-scene>}} tales como
 Este componente depende del componente \texttt{\textbf{input-text}} especificado por el selector \texttt{input}.
 Tiene una función similar a \texttt{dynamic-modifier}, pero para editar un objeto existente.
 Se activa con el comando '\textbf{editar}' a través del evento \texttt{\textbf{transcription}}.
-Una vez activado, se pide el ID del objeto a editar, lo busca en el DOM, le añade temporalmente un 'torus' de señalización y permite modificar sus atributos utilizando la variable \texttt{step} y las funciones auxiliares.
+Una vez activado, se pide el ID (el nombre que aparece sobre objeto) del objeto a editar, lo busca en el DOM, le añade temporalmente un 'torus' de señalización y permite modificar sus atributos utilizando la variable \texttt{step} y las funciones auxiliares.
 Para salir del modo edición se deberá usar el comando 'cambio'.
 Durante el proceso, el componente puede emitir eventos en el elemento \texttt{\textbf{<a-scene>}}, como \texttt{exit-create-mode}, cuando se abandona el modo de edición.
   \item \textbf{delete-object:}
 Este componente depende del componente \texttt{\textbf{input-text}} especificado por el selector \texttt{input}.
 La función principal es la eliminación de objetos.
 Se activa con el comando '\textbf{eliminar}' a través del evento \texttt{\textbf{transcription}}.
-Una vez iniciado, se pide el ID del objeto que se quiere eliminar, lo busca en el DOM y lo señaliza con un torus y espera una confirmación (Sí/No) antes de eliminar la entidad del DOM.
+Una vez iniciado, se pide el ID (el nombre que aparece sobre objeto) del objeto que se quiere eliminar, lo busca en el DOM y lo señaliza con un torus y espera una confirmación (Sí/No) antes de eliminar la entidad del DOM.
 Para salir del modo de eliminación se utilizan los comandos de salida o cambio.
 El componente finaliza su funcionamiento al recibir comandos de salida y, al hacerlo, emite el evento \texttt{exit-create-mode} en el elemento \texttt{\textbf{<a-scene>}}.
+\\
   \item \textbf{scene-saver:}
-Este componente implementa la función \texttt{saveScene} que exporta el estado de las entidades que se encuentran dentro de la entidad cuyo ID es \texttt{\textbf{'objsCreated'}} a un objeto JSON. Guarda atributos clave como \texttt{id}, \texttt{class}, y los valores de componentes como \texttt{position}, \texttt{rotation}, \texttt{scale}, \texttt{geometry}, \texttt{material}, \texttt{light} y \texttt{gltf-model}. También guarda los hijos de cada entidad (incluyendo los textos de los IDs).
+Este componente se activa cuando el \texttt{command-handler} detecta el comando 'guardar'.
+Ejecutando la función \texttt{saveScene} que exporta el estado de las entidades que se encuentran dentro de la entidad cuyo ID es \texttt{\textbf{'objsCreated'}} a un objeto JSON. Guarda atributos clave como \texttt{id}, \texttt{class}, y los valores de componentes como \texttt{position}, \texttt{rotation}, \texttt{scale}, \texttt{geometry}, \texttt{material}, \texttt{light} y \texttt{gltf-model}. También guarda los hijos de cada entidad (incluyendo los textos de los IDs).
 El JSON resultante se almacena en \texttt{localStorage} bajo la clave '\textbf{savedScene}'.
 Para facilitar su uso desde otros componentes o scripts, la función \texttt{saveScene} se expone globalmente a través del objeto \texttt{window}.
   \item \textbf{scene-loader:}
-Este componente implementa la función \texttt{loadScene} que toma un objeto JSON (compatible con el formato de \texttt{scene-saver}).
+Este componente se activa cuando el \texttt{command-handler} detecta el comando 'cargar'.
+Dicho comando activa la función \texttt{loadScene} que toma un objeto JSON (compatible con el formato de \texttt{scene-saver}).
 Limpia el contenido actual de \texttt{\textbf{'objsCreated'}} y recrea las entidades y sus hijos a partir de los datos en el JSON.
 La función \texttt{loadSceneFromStorage} recupera el JSON de \texttt{localStorage} y llama a \texttt{loadScene}.
 Para permitir su uso desde cualquier parte de la aplicación, \texttt{loadSceneFromStorage} se expone globalmente a través del objeto \texttt{window}.
   \item \textbf{sky-manager:}
-Este componente escucha eventos en \texttt{\textbf{<a-scene>}} (enter-create-mode, edit-mode, help-mode, delete-mode, exit-create-mode),
-cuando se recibe uno de estos eventos, el componente cambia dinámicamente el color del material del propio elemento al que está asociado. De este modo, cada modo activo (crear, editar, ayuda, eliminar, etc.) puede reflejarse visualmente mediante un color distinto, facilitando la comprensión del estado actual de la interfaz.
+Este componente escucha eventos en \texttt{\textbf{<a-scene>}} emitidos por el componente \texttt{command-handler} (enter-create-mode, edit-mode, help-mode, delete-mode, exit-create-mode).
+Cuando se recibe uno de estos eventos, el componente cambia dinámicamente el color del material del propio elemento al que está asociado (con un 'setAttribute'); en el caso del Listado~\ref{lst:skyManager} el objeto que cambiará de color será el panel. 
+\begin{lstlisting}[language=HTML, caption=Escena de uso para cambio de color en el componente sky-managar, captionpos=b, label=lst:skyManager]
+  <a-plane sky-manager></a-plane>
+\end{lstlisting}
+De este modo, cada modo activo (crear, editar, ayuda, eliminar, etc.) puede reflejarse visualmente mediante un color distinto, facilitando la comprensión del estado actual de la interfaz.
   \item \textbf{scene-creator:}
 Este componente es uno de inicialización. Asegura la existencia de \texttt{\textbf{<a-assets>}} y añade los assets GLTF necesarios.
 Crea y adjunta a la entidad que lleva este componente (presumiblemente la escena principal o un contenedor) instancias de los otros componentes personalizados (info-panel, text-message, player-move, command-handler, object-creator, dynamic-modifier, edit-mode-handler, delete-object, scene-saver, scene-loader, transcript-panel).
@@ -1465,14 +1502,17 @@ Este es un componente crucial que se encarga del movimiento del jugador (la cám
   \item Crear la entidad del jugador con controles de movimiento.
 \end{itemize}
   \item \textbf{transcript-panel:}
-Muestra una transcripción de las interacciones de voz o comandos, lo que podría ser útil para depuración o para que el usuario revise lo que se ha dicho.
-Esta información se escribe en el elemento \texttt{<a-text>}  que aloja un componente llamado \texttt{\textbf{transcription-display}} en donde el parámetro modificable es \textbf{value}.
+Muestra una transcripción recibida por parte del evento \texttt{transcript} en las interacciones de voz o comandos, lo que podría ser útil para depuración o para que el usuario revise lo que se ha dicho.
+Esta información se escribe en el elemento \texttt{<a-text>}  que aloja un componente llamado \texttt{\textbf{transcription-display}} en donde el parámetro modificable es el \textbf{value}.
 \end{itemize}
 \subsection{Funciones de utilidad}
-Hay varias funciones que son usadas en los componentes varias veces, por ello se han escrito una sola vez fuera de los componentes para que puedan ser reutilizadas en ellos.
+Hay varias funciones que son usadas en los componentes que son capaces de cambiar las propiedades de los objetos, por ello se han escrito una sola vez fuera de los componentes para que puedan ser reutilizadas en ellos.
 Son las siguientes:
 \begin{itemize}
+  \setlength\itemsep{0.3em}
+\setlength\parskip{0pt}  
   \item \textbf{stepsPOS(posKey, entity, transcript):} Permite modificar las coordenadas X, Y, Z de la posición en pasos. Al decir 'posición', se pregunta por la 'x', luego 'y', luego 'z'.
+  \item \textbf{stepsROT(posKey, entity, transcript):} Permite modificar las coordenadas X, Y, Z de la rotación en pasos. Al decir 'rotación', se pregunta por la 'x', luego 'y', luego 'z'.
   \item \textbf{stepCOLOR(entity, transcript):} Intenta encontrar un color válido en el \texttt{transcript} utilizando un mapa (\texttt{colorsMap}) y actualiza el color del material del objeto.
   \item \textbf{stepID(entity, transcript):} Permite cambiar el \texttt{id} de la entidad y también actualiza el texto que se muestra sobre el objeto.
   \item \textbf{stepSIZE(entity, transcript):} Intenta extraer un número del \texttt{transcript} y lo aplica como un nuevo tamaño a todos los parámetros de la geometría del objeto (excepto \texttt{primitive} y otros parámetros específicos).
@@ -1482,7 +1522,7 @@ Son las siguientes:
 \label{sec:funcionamiento}
 
 El diagrama de la Figura~\ref{fig:arquitecturaWorkflow} muestra dos arquitecturas distintas para transcribir voz en la aplicación web VR/AR construida con A-Frame, también muestra la estructura de componentes que comparten ambas arquitecturas a execpción del componente \texttt{\textbf{input-text}}.
-Tenemos un flujo que usará \textbf{Web Speech API} para la versión de escritorio y otro flujo que usará una reinterpretación del proceso de transcripción que usa Web Speech API pero con la API de transcripción de \textbf{AssemblyAI} para su uso en gafas tipo Quest3.
+Existe un flujo que usará \textbf{Web Speech API} para la versión de escritorio y otro flujo que usará una reinterpretación del proceso de transcripción que usa Web Speech API pero con la API de transcripción de \textbf{AssemblyAI} para su uso en gafas tipo Quest 3.
 
 Para cada acción o uso de un comando se seguirá el flujo presentado a continuación que se repetirá cada vez que se acceda de nuevo:
 \begin{figure}[H]
@@ -1495,7 +1535,7 @@ Para cada acción o uso de un comando se seguirá el flujo presentado a continua
 \begin{enumerate}
   \item El usuario desde la aplicación de escritorio o VR/AR dará inicio a la grabación de la voz.
   \item La señal de audio capturada por el componente \texttt{\textbf{input-text}} se envía por el flujo 'VOZ'.
-  Dependiendo de si el usuario está en escritorio o gafas Quest3 se enviará a \textbf{Web Speech API} del navegador o a la API del servidor basada en \textbf{AssemblyAI} respectivamente.
+  Dependiendo de si el usuario está en escritorio o gafas Quest 3 se enviará a \textbf{Web Speech API} del navegador o a la API del servidor basada en \textbf{AssemblyAI} respectivamente.
   \item El navegador o servidor, utilizando estas APIs, son los encargados de todo el PROCESAMIENTO del audio. El componente \texttt{\textbf{input-text}} interactúa con estas APIs para iniciar/detener la grabación y recibir los resultados.
   \item Una vez que se ha terminado de procesar una frase o ha detectado una pausa, devuelve la transcripción al componente \texttt{\textbf{input-text}} por medio del flujo 'TRANSCRIPCIÓN' y este emitirá el evento \texttt{\textbf{transcription}} a la escena.
   \item Luego, la transcripción es manejada por otros componentes de A-Frame como \textbf{command-handler} que se encargará de ejecutar los otros escenarios posibles dependiendo del comando usado.
@@ -1508,18 +1548,43 @@ La naturaleza modular de estos componentes los hace reutilizables en diferentes 
 Al estar diseñados para encapsular funcionalidades específicas y comunicarse a través de eventos de A-Frame,
 pueden ser 'intercambiados' o 'combinados' para construir diferentes aplicaciones sin necesidad de reescribir grandes porciones de código.
 
-Al ser componentes por separado, podemos usar una mezcla de estos componentes para gestionar otras aplicaciones.
+Al ser componentes por separado, se puede usar una mezcla de estos componentes para gestionar otras aplicaciones.
 
 El centro de todo esto es el evento \textbf{transcript} que es emitido a la escena por el componente \texttt{\textbf{input-text}}.
 La gran mayoría de componentes creados en este prototipo utiliza este evento para la gestión interna de funciones.
 
-\subsubsection{Ejemplo de creación de aplicación de transcripción de voz en pantalla con A-Frame }
+\subsection{Ejemplo de la aplicación completa del proyecto}
+A continuación se explicará la creación de una escena para la aplicación final simple desde el HTML. 
+El Listado~\ref{lst:end_scene} es la base fundamental de la creación de la escena con sus respectivos componentes.
+En  este contexto, se usó un componente principal:
+\begin{itemize}
+  \item \textbf{scene-creator}: Se encargará de crear en escena los demás componentes cuando se inicie la aplicación en el navegador.
+\end{itemize}
+Por otro lado, en la entidad con ID \texttt{'objsCreated'} se almacenarán como hijos todos los objetos creados durante el uso de la aplicación.
+
+También podemos observar los diferentes scripts que ejecutan el HTML para su funcionamiento, en donde encontramos desde la librería de A-Frame utilizada hasta el código JavaScript del proyecto.
+\begin{lstlisting}[language=HTML, caption=Escena de ejemplo para ilustrar los dos componentes principales para la creación de la aplicación final., captionpos=b, label=lst:end_scene]
+<head>
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>  
+  <script src="componente.js"></script>
+</head>
+<body>
+  <a-scene>
+      <a-entity scene-creator></a-entity>
+      <a-entity id="objsCreated">
+      </a-entity>
+  </a-scene>
+</body>
+\end{lstlisting}
+
+\subsection{Ejemplo de creación de aplicación de transcripción de voz en pantalla con A-Frame }
 
 A continuación, se ilustrará el uso de la caja de herramientas mediante un ejemplo práctico:
 
 Se quiere una aplicación que transcriba la voz y la muestre en pantalla.
 Se usará una mezcla de componentes auxiliares y componentes principales.
-Como componentes principales usaremos:
+Como componentes principales se usarán:
 \begin{itemize}
  \item \textbf{player-move:} Este componente está compuesto por entidades, dentro de las cuales se encuentran todos los elementos visuales que verá el usuario en la cámara en todo momento.
 Cuenta con el botón del componente \texttt{\textbf{input-text}} y textos auxiliares.
@@ -1534,10 +1599,17 @@ Como componentes auxiliares se usarán:
 \end{itemize}
 
 \begin{lstlisting}[language=HTML, caption=Escena de ejemplo para ilustrar la modularidad donde se ven los dos componentes principales., captionpos=b, label=lst:modular_scene]
+ <head>
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>  
+  <script src="componente.js"></script>
+</head>
+<body>
   <a-scene>
     <a-entity player-move></a-entity>
     <a-entity transcript-panel></a-entity>
   </a-scene>
+</body>
 \end{lstlisting}
 
 \subsubsection{Composición de componentes en la escena}
@@ -1556,7 +1628,7 @@ De esta forma, gran cantidad de los componentes aquí creados pueden ser llamado
 <a-entity id="transcriptPanel" transcript-panel="input:#voiceInputBox"></a-entity>
 \end{lstlisting}
 
-Entonces, si queremos usar esta aplicación sin el \texttt{\textbf{input-text}} o usarla con una entrada de texto diferente, entonces a nuestros componentes se les deberá cambiar el ID de entrada.
+Entonces, si se quiere usar esta aplicación sin el \texttt{\textbf{input-text}} o usarla con una entrada de texto diferente, entonces a los componentes se les deberá cambiar el ID de entrada.
  
 \chapter{Experimentos y validación}
 \label{chap:experimentos}
@@ -1579,16 +1651,16 @@ Se utilizaron dos versiones del sistema para comparar el rendimiento entre plata
 
 La primera versión cuenta con un reconocimiento de voz en el navegador proporcionado por la API de Web Speech API, la cual cuenta con dos posibilidades de uso:
 
-\textbf{Uso en escritorio:}\footnote{\scriptsize \textbf{uso en escritorio:} \url{https://r4cc00n.github.io/SpeechRecognition_in_Browser/DemoEscritorio/}} Con un monitor de 24 pulgadas, utilizando el navegador Google Chrome
+\textbf{Uso en escritorio:}\footnote{\scriptsize \textbf{Uso en escritorio:} \url{https://r4cc00n.github.io/SpeechRecognition_in_Browser/DemoEscritorio/}} Con un monitor de 24 pulgadas, utilizando el navegador Google Chrome
 
 \textbf{Uso en móvil:}\footnote{\scriptsize \textbf{Uso en móvil:} \url{https://r4cc00n.github.io/SpeechRecognition_in_Browser/DemoEscritorio/}} El móvil será de gama media (Redmi Note 11 Pro), usando el navegador de Edge.
 
 La segunda versión de la aplicación cuenta con un reconocimiento de voz que se conecta a un servidor privado. Este servidor realiza la misma funcionalidad que Web Speech API, pero empleando una API diferente llamada AssemblyAI. Cuya posibilidad de uso es:
 
-\textbf{Uso en gafas VR/AR:}\footnote{\scriptsize \textbf{Uso en gafas Quest3:} \url{https://github.com/R4CC00N/SpeechRecognition_in_Browser/tree/main/DemoVR}} Se usaron las gafas de meta Quest3 para trabajar en un entorno virtual.
+\textbf{Uso en gafas VR/AR:}\footnote{\scriptsize \textbf{Uso en gafas Quest 3:} \url{https://github.com/R4CC00N/SpeechRecognition_in_Browser/tree/main/DemoVR}} Se usaron las gafas de meta Quest 3 para trabajar en un entorno virtual.
 
 \subsubsection{Descripción de los usuarios y las pruebas.}
-Participaron cinco individuos con perfiles técnicos diversos, que no habían probado la aplicación con anterioridad. Además, usuarios como el 1 y el 5 no habían experimentado el uso de gafas tipo Quest3.
+Participaron cinco individuos con perfiles técnicos diversos, que no habían probado la aplicación con anterioridad. Además, usuarios como el 1 y el 5 no habían experimentado el uso de gafas tipo Quest 3.
 Esta variedad de perfiles se buscó intencionadamente para obtener una retroalimentación representativa de diferentes niveles de familiaridad con la tecnología.
 
 Las pruebas se llevaron a cabo utilizando la versión final de la demostración de la aplicación.
@@ -1623,15 +1695,15 @@ De 20 comandos de reconocimiento de voz se han obtenido los siguientes resultado
 \hline
 \textbf{Usuario} & \textbf{Plataforma} & \textbf{Comandos exitosos} & \textbf{Observaciones} \\
 \hline
-Usuario 1 & Quest3 & 19 & Reconocimiento lento, modalidad de grabación de audio molesta. \\
+Usuario 1 & Quest 3 & 19/20 & Reconocimiento lento, modalidad de grabación de audio molesta. \\
 \hline
-Usuario 2 & Escritorio & 18 & Reconocimiento rápido, errores con las transcripciones en algunos casos. \\
+Usuario 2 & Escritorio & 18/20 & Reconocimiento rápido, errores con las transcripciones en algunos casos. \\
 \hline
-Usuario 3 & Móvil & 17 & Problemas con la interfaz para grabar audio; una vez obtenido el manejo, bastante fluido gracias a los mensajes de información. \\
+Usuario 3 & Móvil & 17/20 & Problemas con la interfaz para grabar audio; una vez obtenido el manejo, bastante fluido gracias a los mensajes de información. \\
 \hline
-Usuario 4 & Escritorio & 17 & Sin demoras en respuesta, no tiene comandos encadenados. \\
+Usuario 4 & Escritorio & 17/20 & Sin demoras en respuesta, no tiene comandos encadenados. \\
 \hline
-Usuario 5 & Quest3 & 18 & Alta precisión en acento marcado, demoras en respuesta. \\
+Usuario 5 & Quest 3 & 18/20 & Alta precisión en acento marcado, demoras en respuesta. \\
 \hline
 \end{tabular}
 \caption{Número de comandos exitosos por usuario y plataforma}
@@ -1661,7 +1733,7 @@ Usuario 5 & 7 segundos & 8 segundos & 15 segundos & 8 segundos\\
 \label{tab:precision_tarea}
 \end{table}
 
-Se observó que los tiempos en la versión Quest3 fueron ligeramente más altos debido al retardo en la conexión al servidor externo, como se ve en el Cuadro~\ref{tab:precision_tarea}.
+Se observó que los tiempos en la versión Quest 3 fueron ligeramente más altos debido al retardo en la conexión al servidor externo, como se ve en el Cuadro~\ref{tab:precision_tarea} y en la Figura~\ref{fig:TabladeTiempos} más gráficamente.
 \begin{figure}[H]
   \centering
   \includegraphics[width=14cm, keepaspectratio]{img/tabladetiempos.png}
@@ -1727,15 +1799,15 @@ culminando en el desarrollo de un prototipo funcional basado en un sistema de co
 
 Para alcanzar este \textbf{objetivo general}, se plantearon los siguientes \textbf{objetivos específicos}:
 \begin{itemize}
-  \item Explorar qué opciones se tienen para 'Speech-to-Text' en un navegador y en dispositivos tipo Quest3.
+  \item Explorar qué opciones se tienen para 'Speech-to-Text' en un navegador y en dispositivos tipo Quest 3.
   Este objetivo se cumplió, para ello se realizó un análisis exhaustivo de las opciones de Speech-to-Text disponibles para ambos entornos, considerando factores como la precisión, la latencia, la compatibilidad y los costos asociados.
   Se investigaron y evaluaron diferentes tecnologías de reconocimiento de voz, incluyendo la Web Speech API para navegadores de escritorio y la API de AssemblyAI para las gafas Quest 3, identificando sus fortalezas y debilidades en cada plataforma.
   \item Conseguir transcripciones del usuario con la aplicación.
   Este objetivo se cumplió implementando las soluciones de Speech-to-Text seleccionadas en ambas versiones de la aplicación, logrando obtener transcripciones de los comandos de voz emitidos por los usuarios, siendo reflejados en una escena 3D con A-Frame.
   \item Reconocimiento de órdenes concretas para interactuar con el editor de escenas.
   Este objetivo se cumplió. Se desarrolló la lógica necesaria para identificar y procesar un conjunto predefinido de comandos de voz para interactuar con los elementos de la escena 3D, se dividen en comandos de 'creación', 'edición', 'eliminación'.
-  \item Explorar distintas soluciones para encontrar una que funcione bien en gafas tipo Quest3 y otra en el navegador de escritorio.
-  Este objetivo se cumplió satisfactoriamente, ya que se crearon dos prototipos diferentes para el funcionamiento, uno con Web Speech API para escritorio y AssemblyAI para gafas tipo Quest3.
+  \item Explorar distintas soluciones para encontrar una que funcione bien en gafas tipo Quest 3 y otra en el navegador de escritorio.
+  Este objetivo se cumplió satisfactoriamente, ya que se crearon dos prototipos diferentes para el funcionamiento, uno con Web Speech API para escritorio y AssemblyAI para gafas tipo Quest 3.
   \item Hacer que el prototipo soporte comandos como crear, editar, eliminar...
   Este objetivo se cumplió parcialmente. Se logró implementar el soporte para los comandos de 'crear', 'editar', 'guardar' y 'eliminar', demostrando la viabilidad de la edición básica por voz.
   Sin embargo, la gama completa de posibles comandos de edición no se implementó en la totalidad del prototipo debido a las limitaciones de tiempo.
@@ -1743,7 +1815,7 @@ Para alcanzar este \textbf{objetivo general}, se plantearon los siguientes \text
   Sin embargo, la modularidad podría haberse profundizado aún más para facilitar futuras extensiones y el mantenimiento del código.
   \item Construir un prototipo funcional en navegadores.
   Este objetivo se cumplió utilizando la Web Speech API y A-Frame. La funcionalidad es buena, pero el reconocimiento de voz no es perfecto, ya que depende mucho del entorno en el que se encuentre y el tipo de micrófono que se esté usando.
-  \item Construir un prototipo funcional en equipos VR/AR como las gafas Quest3.
+  \item Construir un prototipo funcional en equipos VR/AR como las gafas Quest 3.
   Este objetivo se cumplió utilizando un servidor y la API de AssemblyAI con A-Frame. La funcionalidad, la detección de voz y las transcripciones son buenas; el principal inconveniente reside en la interacción. Para cada comando se debe iniciar y detener la grabación de voz para su envío al servidor. Este proceso, cuando sabes usar la aplicación, no es problemático, pero para usuarios nuevos resulta en una latencia muy alta, afectando a la fluidez de la experiencia.
   \item Utilizar para la construcción el framework A-Frame, porque se adapta especialmente bien a los objetivos anteriores. 
   Este objetivo se cumplió. A-Frame demostró ser un framework adecuado para el desarrollo de la aplicación en ambas plataformas, facilitando la creación de escenas 3D inmersivas y la integración con las diferentes APIs de reconocimiento de voz.
@@ -1800,7 +1872,7 @@ Cabe recalcar que el proyecto se empezó a inicios de diciembre y se ha ido comp
  \ganttbar{\textbf{Desarrollo base}}{4}{5} \\
  \ganttbar{\textbf{Funcionalidades y Componentes}}{6}{7} \\
  \ganttbar{\textbf{Componentes extras}}{8}{9} \\
- \ganttbar{\textbf{Integración Quest3}}{10}{10} \\
+ \ganttbar{\textbf{Integración Quest 3}}{10}{10} \\
  \ganttbar{\textbf{Demo y unión final}}{11}{13} 
  \ganttbar{}{15}{15}\\
  \ganttbar{\textbf{Memoria}}{15}{18} \\ 
@@ -1808,7 +1880,7 @@ Cabe recalcar que el proyecto se empezó a inicios de diciembre y se ha ido comp
 \caption{Cronograma del desarrollo del proyecto}
 \label{fig:gantt}
 \end{figure}
-
+\clearpage
 \section{Aplicación de lo aprendido}
 \label{sec:aplicacion}
 
@@ -1826,11 +1898,14 @@ Cabe recalcar que el proyecto se empezó a inicios de diciembre y se ha ido comp
 \label{sec:lecciones_aprendidas}
 A lo largo del desarrollo de este proyecto, se ha adquirido un conocimiento variado y profundo en tecnologías involucradas en la creación de la aplicación.
 \begin{itemize}
+  \item Se ha explorado cómo desarrollar una interfaz de usuario dirigida por voz.
   \item Se ha profundizado en el uso de A-Frame principalmente, necesario para la creación de experiencias en realidad virtual.
   \item Se indagó profundamente en la construcción de componentes para A-Frame, con diferentes funcionalidades.
   \item Se profundizó en diferentes programas de detección de voz y sus aplicaciones.
+  \item Se experimentó la necesidad de realizar cambios estructurales en la aplicación debido a restricciones tecnológicas o de compatibilidad, y cómo esto impacta el diseño general.
   \item Creación de un servidor privado para conexiones mediante HTTPS.
-  \item Trabajar con dispositivos de VR/AR como las Quest3.
+  \item Se desarrollaron habilidades en la depuración y solución de problemas complejos
+  \item Trabajar con dispositivos de VR/AR como las Quest 3.
   \item Se mejoró el manejo de JavaScript, aunque aplicado al entorno de A-Frame.
   \item Se ha aprendido a utilizar LaTeX para la realización de documentos de investigación y técnicos como es la memoria.
 \end{itemize}
@@ -1847,6 +1922,9 @@ En este apartado se van a mencionar posibles mejoras e ideas que se pueden imple
   \item Se podría integrar un modelo de lenguaje para que el programa entienda diminutivos, sinónimos, etc.
   \item En el tema visual, se podría añadir una interfaz que muestre al usuario qué propiedades puede modificar dentro de una entidad. De esta manera, ayudaría a saber cómo acceder y qué valores se pueden dar.
   \item También en el tema de retroalimentación del programa al usuario, se podría añadir una función de voz (text-to-speech) para que devuelva los mensajes que ahora son de ayuda en texto, mediante la voz.
+  \item Como el objetivo era probar la viabilidad y funcionalidad del reconocimiento de voz y comando, se ha logrado. 
+Para mejorar la usabilidad de la aplicación, se debería solucionar el inconveniente de la grabación por chuncks de audio. Esto implicará una implementación en el servidor para que funcione mediante streaming de manera continua. 
+Esto requeriría una reestructuración completa de la aplicación y un tiempo considerable. 
   \item Finalmente, se podría crear un juego de plataformas simple en donde la dinámica principal para pasar el mapa sea la creación de objetos con colisiones mediante comandos de voz e incluso crear objetos por voz para poder enfrentar enemigos. Esta idea de juego aprovecharía al máximo la creación de objetos y transcripción de comandos, de tal manera que la experiencia de juego se vería enriquecida.
 \end{itemize}
 \cleardoublepage
@@ -1860,7 +1938,7 @@ En este apartado se van a mencionar posibles mejoras e ideas que se pueden imple
 
 % Las siguientes dos instrucciones es todo lo que necesitas
 % para incluir las citas en la memoria
-\bibliographystyle{abbrv}
+\bibliographystyle{plainurl}
 \bibliography{memoria}  % memoria.bib es el nombre del fichero que contiene
 % las referencias bibliográficas. Abre ese fichero y mira el formato que tiene,
 % que se conoce como BibTeX. Hay muchos sitios que exportan referencias en
